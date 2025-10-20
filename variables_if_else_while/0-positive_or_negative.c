@@ -15,7 +15,7 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n > 0)
 {
-printf("%d its positif\n", n)
+printf("%d its positif\n", n);
 }
 else if (n < 0)
 {
