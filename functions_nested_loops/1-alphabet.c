@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * main - affiche tous les chiffres de base 16 en minuscules
+ * print_alphabet - prints the alphabet in lowercase
  *
- * Return: 0 si succès
+ * Return: void
  */
 
 void print_alphabet(void)
 {
-char c,
-for(c = 'a' <= 'z'; c++);
+char c;
+
+for (c = 'a'; c <= 'z'; c++)
 _putchar(c);
-_putchar(\n);
-return (0);
+_putchar('\n');
 }
