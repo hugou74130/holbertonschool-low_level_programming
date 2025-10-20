@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 
 /**
  * main - affiche tous les chiffres de base 16 en minuscules
