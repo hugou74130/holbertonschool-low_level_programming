@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - affiche toutes les combinaisons de deux chiffres distincts
+ * main - point d'entrée du programme
  *
  * Return: 0 si succès
  */
@@ -16,12 +16,10 @@ for (j = i + 1; j <= 9; j++)
 {
 putchar(i + '0');
 putchar(j + '0');
-
 if (!(i == 8 && j == 9))
-{
 putchar(',');
+if (!(i == 8 && j == 9))
 putchar(' ');
-}
 }
 }
 putchar('\n');
