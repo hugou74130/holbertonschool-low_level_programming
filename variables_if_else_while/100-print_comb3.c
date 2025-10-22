@@ -11,12 +11,12 @@ int c;
 int i;
 {
 for (c = '0'; c <= '9';c++)
-
-for (i = '0'; c <= '9';i++)
-
 putchar (',');
+}
+{
+for (i = '0'; c <= '9';i++)
 putchar (' ');
 putchar ('\n');
 return (0);
 }
-}
+
