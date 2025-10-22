@@ -7,15 +7,21 @@
 
 int main(void)
 {
-int c;
-int i;
-
-for (c = '0'; c <= '9';c++)
-putchar (',');
-putchar (' ');
+int n;
+int j;
+for (n = 0; n <= 8; n++)
 {
-for (i = '0'; c <= '9';i++)
-putchar ('\n');
-return (0);
+for (j = n + 1; j <= 9; j++)
+{
+putchar(n + '0');
+putchar(j + '0');
+if (!(n == 8 && j == 9))
+{
+putchar(',');
+putchar(' ');
 }
+}
+}
+putchar('\n');
+return (0);
 }
