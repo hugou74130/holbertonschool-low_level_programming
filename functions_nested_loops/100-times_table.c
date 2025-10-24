@@ -2,9 +2,11 @@
 #include <stdio.h>
 
 /**
- * times_table - prints the 9 times table, starting with 0
+ * print_number - Prints an integer using _putchar
+ * @n: The integer to print
  *
- * Return: void
+ * Description: This function prints an integer number
+ * recursively using the _putchar function.
  */
 
 void print_number(int n)
