@@ -2,21 +2,20 @@
 #include <stdio.h>
 
 /**
- * print_number - prints an integer using only _putchar
- * @n: number to print
+ * print_number - prints an integer using _putchar
+ * @n: integer to print
  */
 
 void print_number(int n)
 {
     if (n / 10)
         print_number(n / 10);
-    putchar((n % 10) + '0');
+    _putchar((n % 10) + '0');
 }
-
 
 void print_times_table(int n)
 {
-    int i, j, result;
+    int i, j, product;
 
     if (n < 0 || n > 15)
         return;
@@ -25,39 +24,30 @@ void print_times_table(int n)
     {
         for (j = 0; j <= n; j++)
         {
-            result = i * j;
+            product = i * j;
 
             if (j == 0)
-                print_number(result);
+            {
+                _putchar('0');
+            }
             else
             {
-                putchar(',');
-                putchar(' ');
+                _putchar(',');
+                _putchar(' ');
 
-                if (result < 10)
+                if (product < 10)
                 {
-                    putchar(' ');
-                    putchar(' ');
-                    print_number(result);
+                    _putchar(' ');
+                    _putchar(' ');
                 }
-                else if (result < 100)
+                else if (product < 100)
                 {
-                    putchar(' ');
-                    print_number(result);
+                    _putchar(' ');
                 }
-                else
-                {
-                    print_number(result);
-                }
+
+                print_number(product);
             }
         }
-        putchar('\n');
+        _putchar('\n');
     }
 }
-
-int main(void)
-{
-    print_times_table(3);
-    return (0);
-}
-
