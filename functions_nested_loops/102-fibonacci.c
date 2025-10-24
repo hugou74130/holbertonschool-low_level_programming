@@ -17,6 +17,9 @@ printf("%ld\n", a);
 c = a + b;
 a = b;
 b = c;
+{
+printf(",");
+}
 }
 return (0);
 }
