@@ -13,8 +13,8 @@ int i;
 
 for (i = 0; i < 50; i++)
 {
-printf("%ld\n", a);
 printf(",");
+printf("%ld\n", a);
 c = a + b;
 a = b;
 b = c;
