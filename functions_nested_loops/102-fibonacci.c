@@ -14,7 +14,7 @@ int i;
 for (i = 0; i < 50; i++)
 {
 
-printf("%ld,\n", a);
+printf("%ld,", a);
 c = a + b;
 a = b;
 b = c;
