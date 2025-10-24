@@ -14,12 +14,10 @@ int i;
 for (i = 0; i < 50; i++)
 {
 printf("%ld\n", a);
+printf(",");
 c = a + b;
 a = b;
 b = c;
-{
-printf(",");
-}
 }
 return (0);
 }
