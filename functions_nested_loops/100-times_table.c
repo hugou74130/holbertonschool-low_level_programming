@@ -16,6 +16,14 @@ print_number(n / 10);
 _putchar((n % 10) + '0');
 }
 
+/**
+ * print_times_table - Prints the n times table, starting with 0
+ * @n: The size of the times table (must be between 0 and 15)
+ *
+ * Description: Prints the multiplication table from 0 up to n,
+ * formatted with commas and spaces so columns align properly.
+ */
+
 void print_times_table(int n)
 {
 int i, j, product;
