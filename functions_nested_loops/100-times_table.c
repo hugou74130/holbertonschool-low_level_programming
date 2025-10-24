@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_number - prints an integer using _putchar
- * @n: integer to print
+ * times_table - prints the 9 times table, starting with 0
+ *
+ * Return: void
  */
 
 void print_number(int n)
