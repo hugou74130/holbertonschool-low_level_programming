@@ -6,15 +6,13 @@
  * Return: 0 on success
  */
 
-int main (void)
+int main(void)
 {
-long  a = 0, b = 1,c;
+long  a = 0, b = 1, c;
 int i;
-
-for (i = 0; i < 50; i++)
+for (i = 1; i < 50; i++)
 {
-
-printf("%ld,", a);
+printf("%ld, ", a);
 c = a + b;
 a = b;
 b = c;
