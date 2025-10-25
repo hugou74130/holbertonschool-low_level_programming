@@ -8,9 +8,9 @@
 
 int main(void)
 {
-long  a = 1, b = a, c;
+long  a = 1, b = 2, c;
 int i;
-for (i = 0; i < 50; i++)
+for (i = 2; i < 50; i++)
 {
 printf("%ld, ", a);
 c = a + b;
