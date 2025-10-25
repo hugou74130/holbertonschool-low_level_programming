@@ -5,49 +5,43 @@
  *
  * Return: 0 on success
  */
-
 int main(void)
 {
-int count;
-unsigned long a = 1, b = 2, a1, a2, b1, b2, t1, t2;
-unsigned long limit = 1000000000;
+    int i;
+    unsigned long a = 1, b = 2, a_head, a_tail, b_head, b_tail;
+    unsigned long head, tail;
+    unsigned long limit = 1000000000;
 
-printf("%lu, %lu", a, b);
+    printf("%lu, %lu", a, b);
 
-for (count = 3; count <= 98; count++)
-{
-if (b < limit)
-{
-t1 = a;
-a = b;
-b = t1 + b;
-printf(", %lu", b);
-}
-else
-{
-a1 = a / limit;
-a2 = a % limit;
-b1 = b / limit;
-b2 = b % limit;
+    for (i = 2; i < 98; i++)
+    {
+        if (b < limit)
+        {
+            head = 0;
+            tail = a + b;
+        }
+        else
+        {
+            a_head = a / limit;
+            a_tail = a % limit;
+            b_head = b / limit;
+            b_tail = b % limit;
 
-t1 = a1;
-t2 = a2;
-a1 = b1;
-a2 = b2;
+            head = a_head + b_head + (a_tail + b_tail) / limit;
+            tail = (a_tail + b_tail) % limit;
+        }
 
-b1 = t1 + b1;
-b2 = t2 + b2;
-if (b2 >= limit)
-{
-b1 += 1;
-b2 -= limit;
-}
+        if (head > 0)
+            printf(", %lu%09lu", head, tail);
+        else
+            printf(", %lu", tail);
 
-printf(", %lu%09lu", b1, b2);
-}
-}
+        a = b;
+        b = head * limit + tail;
+    }
 
-printf("\n");
-return (0);
+    printf("\n");
+    return (0);
 }
 
