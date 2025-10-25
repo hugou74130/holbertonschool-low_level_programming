@@ -10,12 +10,15 @@ int main(void)
 {
 long  a = 1, b = 2, c;
 int i;
+printf("%ld, %ld", a, b);
+
 for (i = 2; i < 50; i++)
 {
-printf("%ld, ", a);
 c = a + b;
+printf(",%ls", c);
 a = b;
 b = c;
 }
+printf("\n");
 return (0);
 }
