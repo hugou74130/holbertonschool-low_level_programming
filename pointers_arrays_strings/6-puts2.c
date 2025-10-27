@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
  * rev_string - reverses a string
  * @s: the string to be reversed
  */
+
 void puts2(char *str)
 {
 	int len = 0, i;
