@@ -9,8 +9,7 @@ void puts2(char *str)
 
 	/* Find the length of the string */
 	while (str[len] != '\0')
-		;
-	len++;
+		len++;
 	/* Print every second character */
 	for (i = 0; i < len; i += 2)
 	{
