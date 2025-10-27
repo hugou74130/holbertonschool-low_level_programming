@@ -3,18 +3,24 @@
  * rev_string - reverses a string
  * @s: the string to be reversed
  */
-void rev_string(char *s)
+void puts_half(char *str)
 {
-	int len = 0, i;
-	char temp;
+	int len = 0, i, start;
+
 	/* Find the length of the string */
-	while (s[len] != '\0')
+	while (str[len] != '\0')
 		len++;
-	/* Swap characters from start and end moving towards the center */
-	for (i = 0; i < len / 2; i++)
+
+	/* Determine the starting index for printing half */
+	if (len % 2 == 0)
+		start = len / 2;
+	else
+		start = (len + 1) / 2;
+
+	/* Print the second half of the string */
+	for (i = start; i < len; i++)
 	{
-		temp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = temp;
+		_putchar(str[i]);
 	}
+	_putchar('\n');
 }
