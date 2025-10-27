@@ -1,7 +1,11 @@
 #include "main.h"
+
 /**
- * rev_string - reverses a string
- * @s: the string to be reversed
+ * puts_half - prints the second half of a string
+ * @str: the string to be processed
+ *
+ * Description: This function prints the second half of a string.
+ * If the number of characters is odd, it prints the last (length - 1) / 2 characters.
  */
 void puts_half(char *str)
 {
