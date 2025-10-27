@@ -1,0 +1,38 @@
+==========================
+Holberton / ALX Betty Style Configuration
+Compatible with VS Code EditorConfig plugin
+==========================
+Indique à EditorConfig que ce fichier est la racine
+root = true
+
+--------------------------
+Règles par défaut pour tous les fichiers
+--------------------------
+[]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+--------------------------
+Spécifique aux fichiers C / Header (.c, .h)
+--------------------------
+[.{c,h}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+max_line_length = 80
+
+Betty veut des lignes de 80 caractères max et indentation de 8 espaces.
+Les accolades doivent être à la ligne (VS Code les respecte automatiquement si tu actives le C formatter).
+--------------------------
+Spécifique aux fichiers Makefile
+--------------------------
+[Makefile]
+indent_style = tab
+
+--------------------------
+Markdown, texte, etc.
+--------------------------
+[*.{md,txt}]
+trim_trailing_whitespace = false
