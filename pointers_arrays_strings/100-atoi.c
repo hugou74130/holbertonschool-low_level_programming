@@ -35,3 +35,4 @@ int _atoi(char *s)
 
 		return nb * signe;
 	}
+}
