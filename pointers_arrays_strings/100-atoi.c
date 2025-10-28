@@ -19,18 +19,17 @@ int _atoi(char *s)
 
 	while (s[i] >= '0' && s[i] <= '9')
 	{
-		int digit = s[i] - '0';
 		if (signe == 1)
 		{
-			if (nb > (INT_MAX - digit) / 10)
+			if (nb > (INT_MAX - (s[i] - '0')) / 10)
 				return INT_MAX;
 		}
 		else
 		{
-			if (nb > (-(INT_MIN + digit)) / 10)
+			if (nb > (-(INT_MIN + (s[i] - '0'))) / 10)
 				return INT_MIN;
 		}
-		nb = nb * 10 + digit;
+		nb = nb * 10 + (s[i] - '0');
 		i++;
 	}
 	return nb * signe;
