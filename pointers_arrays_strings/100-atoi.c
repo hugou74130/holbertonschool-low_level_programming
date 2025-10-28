@@ -32,21 +32,21 @@ int _atoi(char *s)
 	{
 		if (nb > (unsigned int)INT_MAX / 10)
 		{
-			return (signe == 1) ? INT_MAX : INT_MIN;
+			return ((signe == 1) ? INT_MAX : INT_MIN);
 		}
 
 		nb = nb * 10 + (s[i] - '0');
 
 		if (signe == 1 && nb > (unsigned int)INT_MAX)
-			return INT_MAX;
+			return (INT_MAX);
 		if (signe == -1 && nb > (unsigned int)INT_MAX + 1)
-			return INT_MIN;
+			return (INT_MIN);
 
 		i++;
 	}
 
 	/* Conversion finale sans négation directe */
 	if (signe == -1)
-		return (int)(-nb); /* Négation sur unsigned, puis cast */
-	return (int)nb;
+		return ((int)(-nb));
+	return ((int)nb);
 }
