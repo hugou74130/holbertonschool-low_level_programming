@@ -20,4 +20,11 @@ int _atoi(char *s)
 		++i;
 	}
 	return nb * signe;
+
+	if (nb > 2147483647)
+		return (2147483647);
+	if (nb < -2147483648)
+		return (-2147483648);
+
+	return (int)nb;
 }
