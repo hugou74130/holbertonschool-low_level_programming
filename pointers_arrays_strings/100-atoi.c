@@ -33,8 +33,8 @@ int _atoi(char *s)
 		i++;
 	}
 
-	/* Conversion finale sécurisée */
+	/* Conversion finale sans négation directe */
 	if (signe == -1)
-		return -(int)(unsigned int)nb; /* Cast explicite vers unsigned avant négation */
+		return (int)(-nb); /* Négation sur unsigned, puis cast */
 	return (int)nb;
 }
