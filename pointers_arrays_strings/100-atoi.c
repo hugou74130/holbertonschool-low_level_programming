@@ -19,6 +19,7 @@ int _atoi(char *s)
 		nb = nb * 10 + (s[i] - '0');
 		++i;
 	}
+
 	return nb * signe;
 
 	if (nb > 2147483647)
