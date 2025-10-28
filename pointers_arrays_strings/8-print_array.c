@@ -7,12 +7,12 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		_putchar(a[i] + '0'); // Convert integer to character
+		_putchar(a[i] + '0');
 		if (i < n - 1)
 		{
-			_putchar(','); // Print comma between elements
-			_putchar(' '); // Print space after comma
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
-	_putchar('\n'); // Print newline at the end
+	_putchar('\n');
 }
