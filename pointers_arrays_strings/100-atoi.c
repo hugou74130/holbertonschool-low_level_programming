@@ -4,6 +4,6 @@
 int _atoi(char *s)
 {
 	char str[] = ("");
-	int n = _atoi(str);
-	printf("test %d", n);
+	s = _atoi(str);
+	printf("test %d", s);
 }
