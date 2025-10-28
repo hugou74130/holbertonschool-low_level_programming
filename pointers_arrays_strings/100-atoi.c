@@ -18,7 +18,6 @@ int _atoi(char *s)
 
 	while (s[i] >= '0' && s[i] <= '9')
 	{
-		/* Vérification d'overflow avant la multiplication */
 		if (nb > (unsigned int)INT_MAX / 10)
 		{
 			return (signe == 1) ? INT_MAX : INT_MIN;
@@ -26,7 +25,6 @@ int _atoi(char *s)
 
 		nb = nb * 10 + (s[i] - '0');
 
-		/* Vérification après l'addition */
 		if (signe == 1 && nb > (unsigned int)INT_MAX)
 			return INT_MAX;
 		if (signe == -1 && nb > (unsigned int)INT_MAX + 1)
@@ -37,6 +35,6 @@ int _atoi(char *s)
 
 	/* Conversion finale sécurisée */
 	if (signe == -1)
-		return -(int)nb;
+		return -(int)(unsigned int)nb; /* Cast explicite vers unsigned avant négation */
 	return (int)nb;
 }
