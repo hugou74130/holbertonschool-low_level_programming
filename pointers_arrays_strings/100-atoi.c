@@ -3,7 +3,7 @@
 
 int _atoi(char *s)
 {
-	char str[] = ("123ezr");
+	char str[] = ("");
 	int n = _atoi(str);
 	printf("test %d", n);
 }
