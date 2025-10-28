@@ -29,10 +29,9 @@ int _atoi(char *s)
 		{
 			if (nb > (-(INT_MIN + digit)) / 10)
 				return INT_MIN;
-			nb = nb * 10 + digit;
-			i++;
 		}
-
-		return nb * signe;
+		nb = nb * 10 + digit;
+		i++;
 	}
+	return nb * signe;
 }
