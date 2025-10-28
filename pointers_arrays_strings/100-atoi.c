@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 int _atoi(char *s)
 {
@@ -22,10 +23,10 @@ int _atoi(char *s)
 
 	return nb * signe;
 
-	if (nb > 2147483647)
-		return (2147483647);
-	if (nb < -2147483648)
-		return (-2147483648);
+	if (nb > INT_MAX)
+		return INT_MAX;
+	if (nb < INT_MIN)
+		return INT_MIN;
 
 	return (int)nb;
 }
