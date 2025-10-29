@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * cap_string - Met en majuscule la première lettre de chaque mot d'une chaîne.
+ * cap_string - Met en majuscule
  * @s: Pointeur vers la chaîne de caractères à modifier.
  *
  * Cette fonction parcourt la chaîne et convertit en majuscule
  * chaque lettre qui suit un séparateur de mots.
  * Les séparateurs considérés sont : espace, tabulation, saut de ligne,
- * virgule, point-virgule, point, point d’exclamation, point d’interrogation,
+ * virgule, point-virgule, point, point d’exclamation,
  * guillemets, parenthèses et accolades.
  *
  * Return: Pointeur vers la chaîne modifiée.
