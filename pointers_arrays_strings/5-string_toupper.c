@@ -11,12 +11,11 @@
  *
  * Retourne: Le pointeur vers la chaîne modifiée (le même pointeur 's').
  */
-
 char *string_toupper(char *s)
 {
 	int i = 0;
-	while (s[i] != '\0')
 
+	while (s[i] != '\0')
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
