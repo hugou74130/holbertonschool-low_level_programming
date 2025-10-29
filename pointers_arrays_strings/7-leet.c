@@ -31,9 +31,10 @@ char *leet(char *s)
 		}
 		while (letter[j] != '\0')
 			if (s[i] == letter[j])
-			{
-				j++;
-			}
+				s[i] == number[j];
+		{
+			j++;
+		}
 	}
 	return (s);
 }
