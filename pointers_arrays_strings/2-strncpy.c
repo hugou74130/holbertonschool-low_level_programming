@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - Copie au maximum n octets de la chaîne source vers la destination.
+ * _strncpy - Copie au maximum n octets
  * @dest: Le pointeur vers le tampon de destination.
  * @src: Le pointeur vers la chaîne source.
  * @n: Le nombre maximal d'octets à copier.
