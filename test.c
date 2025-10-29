@@ -2,7 +2,12 @@
 
 int main(void)
 {
-	char *p = "salut, monde\n";
-	printf("%s", p);
-	return (0);
+	int i = 10;
+	while (i >= 1)
+
+	{
+		printf("%d \n", i);
+		i--;
+	}
+	printf("Decollage \n");
 }
