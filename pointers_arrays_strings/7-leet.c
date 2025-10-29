@@ -35,6 +35,7 @@ char *leet(char *s)
 		{
 			j++;
 		}
+		i++;
 	}
 	return (s);
 }
