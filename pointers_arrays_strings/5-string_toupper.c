@@ -9,8 +9,9 @@
  * un caractère se trouve dans la plage 'a' à 'z', elle lui soustrait 32
  * (selon la table ASCII) pour obtenir son équivalent majuscule.
  *
- * Retourne: char * - Le pointeur vers la chaîne modifiée
+ * Retourne: CHAR * Le pointeur vers la chaîne modifiée (le même pointeur 's').
  */
+
 char *string_toupper(char *s)
 {
 	int i = 0;
