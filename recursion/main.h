@@ -49,4 +49,5 @@ char *_strchr(char *s, char c);
 char *_strpbrk(char *s, char *accept);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
+void _puts_recursion(char *s);
 #endif /* MAIN_H */
