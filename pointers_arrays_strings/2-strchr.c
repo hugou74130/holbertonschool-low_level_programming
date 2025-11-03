@@ -8,7 +8,8 @@
  * Description: Cette fonction recherche la première occurrence du
  * caractère c dans la chaîne s.
  *
- * Retour: Pointeur sur la première occurrence de c dans s, ou NULL si non trouvé
+ * Retour: Pointeur sur la première occurrence
+ * de c dans s, ou NULL si non trouvé
  */
 
 char *_strchr(char *s, char c)
