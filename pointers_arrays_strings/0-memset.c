@@ -3,10 +3,12 @@
 /**
  * _memset - Remplit la mémoire avec une constante donnée.
  * @s: Pointeur vers la zone mémoire à remplir.
- * @b: Valeur constante à copier dans la mémoire (interprétée comme un char).
+ * @b: Valeur constante à copier
+ * dans la mémoire (interprétée comme un char).
  * @n: Nombre d’octets de la mémoire à remplir.
  *
- * Description: Cette fonction remplit les `n` premiers octets
+ * Description: Cette fonction remplit
+ * les `n` premiers octets
  * de la zone mémoire pointée par `s` avec la valeur constante `b`.
  *
  * Return: Un pointeur vers la zone mémoire `s`.
