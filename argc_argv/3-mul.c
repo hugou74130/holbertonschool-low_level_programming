@@ -7,8 +7,10 @@ int main(int argc, char *argv[])
 	int sum2;
 	int result;
 	if (argc != 3)
+	{
 		printf("Error\n");
-	return (1);
+		return (1);
+	}
 	sum1 = atoi(argv[1]);
 	sum2 = atoi(argv[2]);
 	result = sum1 * sum2;
