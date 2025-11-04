@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * _puts_recursion - Affiche une chaîne de caractères suivie d'une nouvelle ligne
+ * _puts_recursion - Affiche une chaîne de caractères
+ * suivie d'une nouvelle ligne
  * @s: Pointeur sur la chaîne de caractères à afficher
  *
  * Description: Fonction récursive qui affiche chaque caractère d'une chaîne
