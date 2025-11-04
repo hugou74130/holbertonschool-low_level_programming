@@ -12,9 +12,9 @@
  * Return: Always 0 (Success)
  */
 
-int main(int agrc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void)argv;
-	printf("%d\n", agrc);
+	printf("%d\n", argc);
 	return (0);
 }
