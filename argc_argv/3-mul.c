@@ -7,7 +7,8 @@
  * @argv: An array of strings containing the arguments
  *
  * Description: Multiplies two integer numbers passed as command line arguments
- * and prints the result. If the number of arguments is incorrect, prints "Error"
+ * and prints the result. If the
+ * number of arguments is incorrect, prints "Error"
  * and returns 1.
  *
  * Return: 0 on success, 1 on error
