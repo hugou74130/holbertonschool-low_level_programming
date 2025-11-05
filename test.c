@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-int main(void)
+char main(void)
 {
-	int i = 10;
-	while (i >= 1)
+	char i = 'a';
+	while (i <= 'z')
 
-	{
-		printf("%d \n", i);
-		i--;
-	}
-	printf("Decollage \n");
+		printf("%c, ", i++);
+	printf("\n");
+	return (0);
 }
