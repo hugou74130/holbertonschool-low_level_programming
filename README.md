@@ -1,91 +1,114 @@
-# holbertonschool-low_level_programming
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-Description
-This repository contains a collection of C programming exercises covering fundamental concepts and advanced topics. Each directory focuses on specific programming concepts with practical examples and exercises.
-Repository Structure
-argc_argv
-Introduction to command-line arguments in C programs:
+<h3 align="center">Project Title</h3>
 
-Working with argc (argument count) and argv (argument vector)
-Parsing command-line parameters
-Building programs that accept user input from the command line
-Key file: 4-add.c - Program demonstrating argument handling
+<div align="center">
 
-hello_world
-The starting point for C programming:
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-Basic program structure and syntax
-Your first C programs
-Understanding the compilation process
-Key file: 100-intel - Intel assembly output example
+</div>
 
-functions_nested_loops
-Mastering functions and nested loop structures:
+---
 
-Creating and calling functions
-Function parameters and return values
-Working with nested loops for pattern generation
-Key file: 104-fibonacci.c - Fibonacci sequence generator
+<p align="center"> Few lines describing your project.
+    <br>
+</p>
 
-more_functions_nested_loops
-Advanced function and loop concepts:
+## 📝 Table of Contents
 
-Complex nested loop patterns
-Function optimization
-Practical applications of functions and loops
-Notable update: Added print_rev function to print strings in reverse
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-pointers_arrays_strings
-Understanding pointers, arrays, and string manipulation:
+## 🧐 About <a name = "about"></a>
 
-Pointer arithmetic and dereferencing
-Array operations and indexing
-String handling in C
-Memory management basics
-Key file: 8-print_diagsums.c - Diagonal sums of a matrix
+Write about 1-2 paragraphs describing the purpose of your project.
 
-recursion
-Implementing recursive algorithms:
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-Understanding recursion and base cases
-Recursive problem-solving
-Optimization techniques
-Key file: 6-is_prime_number.c - Prime number checker using recursion
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-variables_if_else_while
-Fundamental programming constructs:
+### Prerequisites
 
-Variable declaration and initialization
-Conditional statements (if, else)
-Loop structures (while, do-while)
-Decision-making logic
+What things you need to install the software and how to install them.
 
-output
-Output files and results from compiled programs
-Getting Started
+```
+Give examples
+```
 
-Clone or navigate to this repository
-Choose a directory based on the concept you want to learn
-Review the C source files
-Compile using: gcc -o program_name filename.c
-Run the compiled program: ./program_name
+### Installing
 
-Requirements
+A step by step series of examples that tell you how to get a development env running.
 
-GCC compiler (or compatible C compiler)
-Unix-like operating system (Linux, macOS, etc.) or Windows with MinGW/Cygwin
-Text editor or IDE
-Basic command-line knowledge
+Say what the step will be
 
-Learning Path
-Follow this recommended order:
+```
+Give the example
+```
 
-variables_if_else_while - Learn the basics
-hello_world - Create your first programs
-functions_nested_loops - Understand functions
-more_functions_nested_loops - Advanced loops
-pointers_arrays_strings - Work with memory
-argc_argv - Handle program arguments
-recursion - Master recursive thinking
+And repeat
 
-Compilation Tips
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo.
+
+## 🔧 Running the tests <a name = "tests"></a>
+
+Explain how to run the automated tests for this system.
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## 🎈 Usage <a name="usage"></a>
+
+Add notes about how to use the system.
+
+## 🚀 Deployment <a name = "deployment"></a>
+
+Add additional notes about how to deploy this on a live system.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [VueJs](https://vuejs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+
+See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References
