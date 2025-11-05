@@ -10,7 +10,3 @@ Program structure and syntax
 Data types and their sizes
 ASCII art and string output
 
-Exercises
-0-preprocessor
-Objective: Run the C preprocessor
-This script runs the preprocessor on a C file. The preprocessor handles #include and #define directives, expanding macros and including header files.
