@@ -1,29 +1,29 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=400px height=400px src="https://image.noelshack.com/fichiers/2025/45/3/1762375639-gemini-generated-image-aglxqiaglxqiaglx.png" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/more_functions_nested_loops" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Git intro</h3>
+<h3 align="center">more_functions_nested_loops - Advanced Functions and Loops</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> This project serves as a practical and accessible introductory guide for those new to Git and GitHub. It provides a safe learning environment to master the basic commands and understand the fundamental principles of distributed version control.
-	<br>
+<p align="center"> Advanced exercises on functions, nested loops, and pattern printing in C.
+    <br> 
 </p>
 
 ## 📝 Table of Contents
-
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Programs](#programs)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
@@ -31,162 +31,208 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project builds upon basic functions and loops with more advanced challenges. You will create functions for character validation, implement complex nested loop patterns, solve algorithmic problems, and develop visual output programs that draw shapes and patterns.
+
+These exercises develop problem-solving skills and help you understand how to break complex problems into manageable functions. You'll work with mathematical concepts, control flow optimization, and creative use of loops.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-This "Git Intro" repository is a dedicated, hands-on learning resource created specifically for beginners who are taking their first steps with Git and GitHub. The primary purpose of this project is to demystify version control, transitioning you from confusion to confidence by providing a safe, controlled environment for practice. We focus on the absolute essentials, ensuring you grasp the core concepts and master fundamental commands like clone, add, commit, push, and pull without the pressure of a complex, live production project.
-
-The ultimate goal is to equip you with the practical knowledge necessary to collaborate effectively and manage your own code history. By providing clear, step-by-step exercises and files explicitly designed for experimentation, this project ensures you can gain true mastery over the basic Git workflow. Use this space to make mistakes, learn from them, and firmly establish the foundational skills required before moving on to larger, team-based development projects.
 ### Prerequisites
 
-To get started with this project and practice the Git commands, you primarily need two things installed on your system: Git and a Code Editor.
-
-### 1. Prerequisites
-
-Before starting, ensure you have the following installed:
-
-	Git: The version control system itself.
-
-	A Code Editor: To view and modify the files within the repository (e.g., VS Code, Sublime Text, Atom).
-
-	A Command Line Interface (CLI): You will be executing all Git commands through a terminal window (e.g., Terminal on Mac/Linux, Git Bash on Windows, or integrated terminal in your code editor).
-
-### 2. Installation Instructions
-
-Follow the steps below to set up your environment:
-
-### Installing
-
-This section provides a step-by-step guide to get your Git development environment running and ready for practice.
-
-### Step 1: Install Git
-
-The first step is installing the Git version control system on your computer.
+You will need:
 
 ```
-# On Windows, download and run the installer from git-scm.com.
-# On macOS (using Homebrew):
-brew install git
-
-# On Linux (Debian/Ubuntu):
-sudo apt update
-sudo apt install git
+- GCC (GNU Compiler Collection)
+- Git
+- Terminal or command line
+- Understanding of functions and nested loops
 ```
 
-### Step 2: Verify Git Installation
+### Installation
 
-Confirm that Git is installed correctly and accessible from your command line.
+Clone and navigate to the more_functions_nested_loops directory:
 
-```
-# Check the installed version of Git
-git --version
-```
-
-### Step 3: Configure Your Git Identity
-
-Set your global user name and email. These credentials will be attached to every commit you make.
-
-```
-# Replace "Your Name" with your actual name
-git config --global user.name "Your Name"
-
-# Replace "your.email@example.com" with your actual email
-git config --global user.email "your.email@example.com"
-```
-### Step 4: Clone the Git Intro Repository
-
-Download a copy of this entire project repository onto your local machine.
-
-```
-# Navigate to the folder where you want to keep your projects
-cd ~/Projects
-
-# Clone the repository (Replace [REPOSITORY_URL] with the actual URL)
-git clone [REPOSITORY_URL]
-
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/more_functions_nested_loops
 ```
 
-### Step 5: Navigate into the Project Directory
+## 📋 Programs <a name = "programs"></a>
 
-Change your current directory in the terminal to the newly cloned project folder.
+### 0-isupper.c
+Checks if a character is uppercase (A-Z). Returns 1 if true, 0 if false. An essential character classification function.
 
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-isupper.c main.c -o isupper
+./isupper
 ```
-# Change directory into the cloned project folder
-cd git-intro
+
+Key concepts: Character validation, ASCII values, boolean return values
+
+### 1-isdigit.c
+Checks if a character is a digit (0-9). Returns 1 if true, 0 if false. Similar to standard library `isdigit()`.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-isdigit.c main.c -o isdigit
+./isdigit
 ```
+
+Key concepts: Digit classification, character range checking
+
+### 2-mul.c
+Multiplies two integers and returns the result. A basic arithmetic function for understanding parameter passing and return values.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-mul.c main.c -o mul
+./mul
+```
+
+Key concepts: Multiplication, function parameters, integer arithmetic
+
+### 3-print_numbers.c
+Prints all digits from 0 to 9 using nested loops. Each digit is printed on the same line.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-print_numbers.c main.c -o print_numbers
+./print_numbers
+# Output: 0123456789
+```
+
+Key concepts: Loop iteration, digit printing, character conversion
+
+### 4-print_most_numbers.c
+Prints all digits from 0 to 9 except 2 and 4. Demonstrates conditional skipping within loops.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-print_most_numbers.c main.c -o print_most_numbers
+./print_most_numbers
+# Output: 01356789
+```
+
+Key concepts: Conditional loops, skip logic, loop control
+
+### 5-more_numbers.c
+Prints digits 0 to 14 ten times, each on a new line. Shows how to handle multi-digit numbers in a loop.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-more_numbers.c main.c -o more_numbers
+./more_numbers
+# Output: 0123456789101112131410123456789101112131...
+```
+
+Key concepts: Nested loops, number formatting, division and modulo
+
+### 6-print_line.c
+Draws a horizontal line of a specified length using the '#' character. Demonstrates simple shape drawing.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-print_line.c main.c -o print_line
+./print_line
+# Output: ############ (length determined by function parameter)
+```
+
+Key concepts: Pattern printing, loop-based graphics, character repetition
+
+### 7-print_diagonal.c
+Draws a diagonal line using the '\' character and spaces. Shows coordinate-based pattern generation.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-print_diagonal.c main.c -o print_diagonal
+./print_diagonal
+# Output: 
+# \
+#  \
+#   \
+```
+
+Key concepts: Nested loops for positioning, spacing, diagonal patterns
+
+### 8-print_square.c
+Draws a square of a specified size using '#' characters. A classic nested loop pattern exercise.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-print_square.c main.c -o print_square
+./print_square
+# Output:
+# ####
+# ####
+# ####
+# ####
+```
+
+Key concepts: 2D pattern generation, nested loops, grid creation
+
+### 9-fizz_buzz.c
+Implements the FizzBuzz algorithm. Prints numbers from 1 to 100, but replaces multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz".
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 9-fizz_buzz.c main.c -o fizz_buzz
+./fizz_buzz
+# Output: 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz ... FizzBuzz
+```
+
+Key concepts: Conditional logic, modulo operator, string output, algorithm implementation
+
+### 10-print_triangle.c
+Draws a right-angled triangle of a specified size using '#' characters. A more complex pattern combining nested loops and spacing.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 10-print_triangle.c main.c -o print_triangle
+./print_triangle
+# Output:
+#         #
+#        ##
+#       ###
+#      ####
+#     #####
+```
+
+Key concepts: Complex nested loops, dynamic spacing, progressive patterns
 
 ## 🎈 Usage <a name="usage"></a>
 
-This repository is designed to be used interactively via your Command Line Interface (CLI). Follow the guided tutorials within the project to practice essential Git commands.
+### General Compilation
 
-### 1. Locate the Tutorials
-
-Start by reviewing the main instructions and tutorials provided in the repository.
-
-```
-# List the contents of the project
-ls
-# Expected output: README.md, TUTORIALS/, PRACTICE_FILES/
-```
-### 2. Configure Your Practice File
-
-Navigate to the directory dedicated to practice and open the designated file in your code editor.
-Bash
-```
-# Change into the practice files directory
-cd PRACTICE_FILES
-
-# Open the main practice file in your editor (e.g., using 'code' for VS Code)
-code practice-workspace.txt
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 filename.c main.c -o program_name
+./program_name
 ```
 
-### 3. Practice the Core Workflow
+### Running the Programs
 
-Follow the guided steps in the TUTORIALS/ folder. For each step, you will modify a file, stage the change, and commit it.
-```
-Action	Command to Practice	Purpose
-Make a Change	(Use your code editor)	Modify practice-workspace.txt by adding a line of text.
-Stage the Change	git add practice-workspace.txt	Tell Git which changes to include in the next snapshot (commit).
-Commit the Change	git commit -m "Added my first line"	Record the staged changes as a permanent snapshot in the project history.
-```
+Most programs require including `main.h` and linking with a main file. The typical usage pattern is:
 
-### 4. Practice Branching
-
-Once you are comfortable with commits, practice isolating your work on a new branch.
-Bash
-```
-# Create and switch to a new branch for feature work
-git checkout -b my-new-feature
-
-# Repeat the modify, add, and commit steps here...
-
-# Switch back to the main branch
-git checkout main
+```bash
+# Compile with main.c which calls the functions
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 function.c main.c -o program
+./program
 ```
 
-### 5. Review Your History
+## 🔑 Key Concepts <a name = "key_concepts"></a>
 
-Use the following command regularly to see how your changes and commits build the project's history.
-Bash
-```
-# View the commit history
-git log
-```
+- **Character Validation**: Checking character properties (uppercase, digit, etc.)
+- **Nested Loops**: Loops within loops for 2D pattern generation
+- **Pattern Drawing**: Creating visual output using characters
+- **Algorithm Implementation**: FizzBuzz and other algorithmic problems
+- **Loop Control**: Skip statements, conditional iterations
+- **Arithmetic Operations**: Multiplication, division, modulo
+- **Grid-Based Output**: Coordinate systems for positioning characters
+- **Spacing and Formatting**: Creating aligned patterns
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Git](https://git-scm.com/) - The essential distributed version control system.
-- [Github](https://github.com/) - The platform used to host this repository and practice collaboration workflows.
-- [your Terminal/CLI]() - The main interface for executing all practice commands.
-- [VS Code (or your preferred editor)]() - The tool used for editing the exercise files.
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
+- [GCC](https://gcc.gnu.org/) - C Compiler
+- [Linux](https://www.linux.org/) - Operating System
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130)
+- [@hugou74130](https://github.com/hugou74130) - Complete work
+
+See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Holberton School for the curriculum and educational resources
+- The open-source community for development tools
+- All mentors and peers who contributed to the success of this project
