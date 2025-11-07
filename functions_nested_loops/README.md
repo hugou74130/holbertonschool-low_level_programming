@@ -1,29 +1,29 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=400px height=400px src="https://image.noelshack.com/fichiers/2025/45/3/1762375639-gemini-generated-image-aglxqiaglxqiaglx.png" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/functions_nested_loops" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Git intro</h3>
+<h3 align="center">functions_nested_loops - Functions and Nested Loops in C</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> This project serves as a practical and accessible introductory guide for those new to Git and GitHub. It provides a safe learning environment to master the basic commands and understand the fundamental principles of distributed version control.
-	<br>
+<p align="center"> Master functions, nested loops, and fundamental programming patterns in C.
+    <br> 
 </p>
 
 ## 📝 Table of Contents
-
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Programs](#programs)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
@@ -31,162 +31,201 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project focuses on mastering functions and nested loops in C programming. You will learn how to write reusable functions, work with loops, perform mathematical operations, and understand control flow in programming.
+
+Through practical exercises, you will develop skills in creating modular code, implementing algorithms, validating input, and building increasingly complex programs. These are fundamental building blocks for any C programmer.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-This "Git Intro" repository is a dedicated, hands-on learning resource created specifically for beginners who are taking their first steps with Git and GitHub. The primary purpose of this project is to demystify version control, transitioning you from confusion to confidence by providing a safe, controlled environment for practice. We focus on the absolute essentials, ensuring you grasp the core concepts and master fundamental commands like clone, add, commit, push, and pull without the pressure of a complex, live production project.
-
-The ultimate goal is to equip you with the practical knowledge necessary to collaborate effectively and manage your own code history. By providing clear, step-by-step exercises and files explicitly designed for experimentation, this project ensures you can gain true mastery over the basic Git workflow. Use this space to make mistakes, learn from them, and firmly establish the foundational skills required before moving on to larger, team-based development projects.
 ### Prerequisites
 
-To get started with this project and practice the Git commands, you primarily need two things installed on your system: Git and a Code Editor.
-
-### 1. Prerequisites
-
-Before starting, ensure you have the following installed:
-
-	Git: The version control system itself.
-
-	A Code Editor: To view and modify the files within the repository (e.g., VS Code, Sublime Text, Atom).
-
-	A Command Line Interface (CLI): You will be executing all Git commands through a terminal window (e.g., Terminal on Mac/Linux, Git Bash on Windows, or integrated terminal in your code editor).
-
-### 2. Installation Instructions
-
-Follow the steps below to set up your environment:
-
-### Installing
-
-This section provides a step-by-step guide to get your Git development environment running and ready for practice.
-
-### Step 1: Install Git
-
-The first step is installing the Git version control system on your computer.
+You will need:
 
 ```
-# On Windows, download and run the installer from git-scm.com.
-# On macOS (using Homebrew):
-brew install git
-
-# On Linux (Debian/Ubuntu):
-sudo apt update
-sudo apt install git
+- GCC (GNU Compiler Collection)
+- Git
+- Terminal or command line
+- Basic understanding of C programming fundamentals
 ```
 
-### Step 2: Verify Git Installation
+### Installation
 
-Confirm that Git is installed correctly and accessible from your command line.
+Clone and navigate to the functions_nested_loops directory:
 
-```
-# Check the installed version of Git
-git --version
-```
-
-### Step 3: Configure Your Git Identity
-
-Set your global user name and email. These credentials will be attached to every commit you make.
-
-```
-# Replace "Your Name" with your actual name
-git config --global user.name "Your Name"
-
-# Replace "your.email@example.com" with your actual email
-git config --global user.email "your.email@example.com"
-```
-### Step 4: Clone the Git Intro Repository
-
-Download a copy of this entire project repository onto your local machine.
-
-```
-# Navigate to the folder where you want to keep your projects
-cd ~/Projects
-
-# Clone the repository (Replace [REPOSITORY_URL] with the actual URL)
-git clone [REPOSITORY_URL]
-
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/functions_nested_loops
 ```
 
-### Step 5: Navigate into the Project Directory
+## 📋 Programs <a name = "programs"></a>
 
-Change your current directory in the terminal to the newly cloned project folder.
+### 0-putchar.c
+Prints the string "_putchar" using only the _putchar function. This is your first introduction to custom functions.
 
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-putchar.c _putchar.c -o putchar
+./putchar
 ```
-# Change directory into the cloned project folder
-cd git-intro
+
+### 1-alphabet.c
+Prints the alphabet in lowercase (a-z) using a function. Demonstrates the use of loops within functions.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-alphabet.c _putchar.c -o alphabet
+./alphabet
+```
+
+### 2-print_alphabet_x10.c
+Prints the alphabet 10 times, each on a new line. Shows nested loops working together.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-print_alphabet_x10.c _putchar.c -o alphabet_x10
+./alphabet_x10
+```
+
+### 3-islower.c
+Checks if a character is lowercase (a-z). Returns 1 if true, 0 if false. Demonstrates conditional logic in functions.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-islower.c _putchar.c -o islower
+./islower
+```
+
+### 4-isalpha.c
+Checks if a character is alphabetic (a-z or A-Z). Returns 1 if true, 0 if false. Shows character classification.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-isalpha.c _putchar.c -o isalpha
+./isalpha
+```
+
+### 5-sign.c
+Prints the sign of a number: positive (+), negative (-), or zero (0). Demonstrates the use of if-else statements in functions.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-sign.c _putchar.c -o sign
+./sign
+```
+
+### 6-abs.c
+Computes the absolute value of a number. Shows how to return values from functions.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-abs.c _putchar.c -o abs
+./abs
+```
+
+### 7-print_last_digit.c
+Extracts and prints the last digit of a number. Demonstrates modulo operator usage.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-print_last_digit.c _putchar.c -o last_digit
+./last_digit
+```
+
+### 8-24_hours.c
+Prints every minute of a 24-hour day (00:00 to 23:59). Shows nested loops for time calculations.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-24_hours.c _putchar.c -o 24_hours
+./24_hours
+```
+
+### 9-times_table.c
+Prints the 9 times multiplication table (0 to 9). Uses nested loops to create formatted output.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 9-times_table.c _putchar.c -o times_table
+./times_table
+```
+
+### 10-add.c
+Adds two numbers together. A simple function that takes two parameters and returns their sum.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 10-add.c _putchar.c -o add
+./add
+```
+
+### 11-print_to_98.c
+Prints all natural numbers from n to 98. Demonstrates loops with different starting points.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 11-print_to_98.c _putchar.c -o print_to_98
+./print_to_98
+```
+
+### 100-times_table.c
+Prints the n times multiplication table (advanced version). Takes a parameter and generates a custom times table.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 100-times_table.c _putchar.c -o times_table_n
+./times_table_n
+```
+
+### 101-natural.c
+Calculates the sum of all multiples of 3 or 5 below a given number. Demonstrates algorithmic thinking.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 101-natural.c _putchar.c -o natural
+./natural
+```
+
+### 102-fibonacci.c
+Prints the Fibonacci sequence up to 50 Fibonacci numbers. Shows recursion and sequence generation.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 102-fibonacci.c _putchar.c -o fibonacci
+./fibonacci
+```
+
+### 103-fibonacci.c
+Prints Fibonacci numbers whose values do not exceed 4,000,000. Demonstrates conditional loops.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 103-fibonacci.c _putchar.c -o fibonacci_limit
+./fibonacci_limit
+```
+
+### 104-fibonacci.c
+Handles larger Fibonacci numbers using different data types. Shows how to work with big integers.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 104-fibonacci.c _putchar.c -o fibonacci_large
+./fibonacci_large
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
-This repository is designed to be used interactively via your Command Line Interface (CLI). Follow the guided tutorials within the project to practice essential Git commands.
+General compilation pattern:
 
-### 1. Locate the Tutorials
-
-Start by reviewing the main instructions and tutorials provided in the repository.
-
-```
-# List the contents of the project
-ls
-# Expected output: README.md, TUTORIALS/, PRACTICE_FILES/
-```
-### 2. Configure Your Practice File
-
-Navigate to the directory dedicated to practice and open the designated file in your code editor.
-Bash
-```
-# Change into the practice files directory
-cd PRACTICE_FILES
-
-# Open the main practice file in your editor (e.g., using 'code' for VS Code)
-code practice-workspace.txt
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 program.c _putchar.c -o program_name
+./program_name
 ```
 
-### 3. Practice the Core Workflow
-
-Follow the guided steps in the TUTORIALS/ folder. For each step, you will modify a file, stage the change, and commit it.
-```
-Action	Command to Practice	Purpose
-Make a Change	(Use your code editor)	Modify practice-workspace.txt by adding a line of text.
-Stage the Change	git add practice-workspace.txt	Tell Git which changes to include in the next snapshot (commit).
-Commit the Change	git commit -m "Added my first line"	Record the staged changes as a permanent snapshot in the project history.
-```
-
-### 4. Practice Branching
-
-Once you are comfortable with commits, practice isolating your work on a new branch.
-Bash
-```
-# Create and switch to a new branch for feature work
-git checkout -b my-new-feature
-
-# Repeat the modify, add, and commit steps here...
-
-# Switch back to the main branch
-git checkout main
-```
-
-### 5. Review Your History
-
-Use the following command regularly to see how your changes and commits build the project's history.
-Bash
-```
-# View the commit history
-git log
-```
+Key concepts covered:
+- **Functions**: Creating reusable blocks of code
+- **Nested Loops**: Loops within loops for complex iterations
+- **Control Flow**: if-else statements and conditional logic
+- **Return Values**: Functions returning results
+- **Parameters**: Functions accepting input values
+- **Modular Code**: Breaking problems into smaller functions
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Git](https://git-scm.com/) - The essential distributed version control system.
-- [Github](https://github.com/) - The platform used to host this repository and practice collaboration workflows.
-- [your Terminal/CLI]() - The main interface for executing all practice commands.
-- [VS Code (or your preferred editor)]() - The tool used for editing the exercise files.
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
+- [GCC](https://gcc.gnu.org/) - C Compiler
+- [Linux](https://www.linux.org/) - Operating System
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130)
+- [@hugou74130](https://github.com/hugou74130) - Complete work
+
+See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Holberton School for the curriculum and educational resources
+- The open-source community for development tools
+- All mentors and peers who contributed to the success of this project
