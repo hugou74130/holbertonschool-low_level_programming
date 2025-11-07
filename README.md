@@ -17,8 +17,8 @@
 ---
 
 <p align="center">  
-Ce dépôt contient l’ensemble des projets réalisés en langage C dans le cadre du cursus **Low Level Programming** de la **Holberton School**.  
-Il couvre les bases de la programmation système : mémoire, pointeurs, structures, compilation, et algorithmes fondamentaux.  
+This repository contains all C programming projects completed as part of the **Low Level Programming** curriculum at **Holberton School**.  
+It covers the fundamentals of system programming: memory, pointers, structures, compilation, and basic algorithms.  
 </p>
 
 ---
@@ -37,50 +37,50 @@ Il couvre les bases de la programmation système : mémoire, pointeurs, structur
 
 ## 🧐 About <a name = "about"></a>
 
-Le projet **Low Level Programming** a pour objectif d’apprendre les fondations de la programmation en langage **C**, ainsi que la logique bas niveau derrière le fonctionnement des ordinateurs.  
-On y découvre notamment :  
-- La gestion de la mémoire (malloc, free)  
-- Les pointeurs et les tableaux  
-- Les structures et les listes chaînées  
-- Les entrées/sorties et les fichiers  
-- Les algorithmes de tri et de manipulation de données  
-- Les concepts de compilation et d’édition de liens  
+The **Low Level Programming** track focuses on learning the foundations of the **C language** and the underlying logic of how computers work.  
+Topics covered include:  
+- Memory management (`malloc`, `free`)  
+- Pointers and arrays  
+- Structures and linked lists  
+- File I/O and system calls  
+- Sorting algorithms and data manipulation  
+- Compilation and linking concepts  
 
-Chaque dossier de ce dépôt correspond à un projet ou un module indépendant.
+Each directory in this repository corresponds to an individual project or module.
 
 ---
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-### Prérequis
+### Prerequisites
 
-Tu dois disposer d’un environnement compatible avec la compilation en C.  
-Sur Ubuntu (ou tout système Linux), installe simplement :
+You need an environment capable of compiling C code.  
+On Ubuntu (or any Linux system), simply install:
 
 ```bash
 sudo apt update
 sudo apt install build-essential
 ```
 
-Cela installe `gcc`, `make` et les bibliothèques nécessaires.
+This installs `gcc`, `make`, and the required libraries.
 
-### Installation
+### Installing
 
-Clone le dépôt sur ta machine :
+Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
 cd holbertonschool-low_level_programming
 ```
 
-Chaque dossier contient un ou plusieurs fichiers `.c` ainsi qu’un `main.c` de test.  
-Pour compiler un programme, utilise par exemple :
+Each folder contains one or more `.c` files along with a test file `main.c`.  
+To compile a program, run for example:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic file.c main.c -o program
 ```
 
-Puis exécute-le :
+Then execute it:
 
 ```bash
 ./program
@@ -90,52 +90,52 @@ Puis exécute-le :
 
 ## 🔧 Tests <a name = "tests"></a>
 
-Les tests sont réalisés à l’aide de fichiers `main.c` fournis pour chaque projet.  
-Pour tester un code :
+Tests are performed using the `main.c` files provided with each project.  
+To run tests:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic my_file.c main.c -o test
 ./test
 ```
 
-Tu peux également créer tes propres fichiers de test pour valider le comportement des fonctions.
+You can also write your own test files to verify function behavior.
 
 ---
 
 ## 🎈 Usage <a name="usage"></a>
 
-Ce dépôt peut être utilisé comme :
-- Référence pour l’apprentissage du langage **C**.  
-- Support pour s’entraîner à la **logique algorithmique**.  
-- Base pour d’autres projets systèmes (par exemple : mini-shell, gestion mémoire, etc.).
+This repository can be used as:
+- A reference for learning **C programming**.  
+- A support tool for practicing **algorithmic logic**.  
+- A base for other system-level projects (e.g., mini-shell, memory management, etc.).
 
 ---
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Aucun déploiement n’est requis :  
-Les programmes sont exécutés en **ligne de commande** directement après compilation.  
+No deployment required:  
+Programs are executed directly from the **command line** after compilation.
 
 ---
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Langage principal  
-- [GCC](https://gcc.gnu.org/) – Compilateur  
-- [Make](https://www.gnu.org/software/make/) – Automatisation de la compilation  
-- [Ubuntu](https://ubuntu.com/) – Environnement de développement recommandé  
+- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Core language  
+- [GCC](https://gcc.gnu.org/) – Compiler  
+- [Make](https://www.gnu.org/software/make/) – Build automation tool  
+- [Ubuntu](https://ubuntu.com/) – Recommended development environment  
 
 ---
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130) – Développement, exercices et tests  
-- Projet inspiré du cursus **Holberton School**
+- [@hugou74130](https://github.com/hugou74130) – Development, exercises, and testing  
+- Inspired by the **Holberton School** curriculum
 
 ---
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Holberton School pour les projets et les ressources pédagogiques  
-- L’équipe et les étudiants de la communauté pour leur aide et leurs retours  
-- Les documentations officielles du C et du GCC  
+- Holberton School for the projects and educational resources  
+- Fellow students and community members for their feedback and support  
+- Official documentation of C and GCC  
