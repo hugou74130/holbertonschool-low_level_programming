@@ -1,29 +1,29 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=400px height=400px src="https://image.noelshack.com/fichiers/2025/45/3/1762375639-gemini-generated-image-aglxqiaglxqiaglx.png" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/0x01-hello_world" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Git intro</h3>
+<h3 align="center">0x01-hello_world - Getting Started with C</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> This project serves as a practical and accessible introductory guide for those new to Git and GitHub. It provides a safe learning environment to master the basic commands and understand the fundamental principles of distributed version control.
-	<br>
+<p align="center"> Your first steps in C programming: printing, conditionals, and basic loops.
+    <br> 
 </p>
 
 ## 📝 Table of Contents
-
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Programs](#programs)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
@@ -31,162 +31,286 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is the starting point of your C programming journey with Holberton School. These beginner exercises focus on fundamental concepts: conditional statements (if/else), basic loops, character and number output, and simple algorithms. 
+
+You'll learn how to compile and run C programs, use variables, work with standard library functions like `printf()`, and implement basic control flow. These foundational skills are essential before moving on to more complex programming concepts.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-This "Git Intro" repository is a dedicated, hands-on learning resource created specifically for beginners who are taking their first steps with Git and GitHub. The primary purpose of this project is to demystify version control, transitioning you from confusion to confidence by providing a safe, controlled environment for practice. We focus on the absolute essentials, ensuring you grasp the core concepts and master fundamental commands like clone, add, commit, push, and pull without the pressure of a complex, live production project.
-
-The ultimate goal is to equip you with the practical knowledge necessary to collaborate effectively and manage your own code history. By providing clear, step-by-step exercises and files explicitly designed for experimentation, this project ensures you can gain true mastery over the basic Git workflow. Use this space to make mistakes, learn from them, and firmly establish the foundational skills required before moving on to larger, team-based development projects.
 ### Prerequisites
 
-To get started with this project and practice the Git commands, you primarily need two things installed on your system: Git and a Code Editor.
-
-### 1. Prerequisites
-
-Before starting, ensure you have the following installed:
-
-	Git: The version control system itself.
-
-	A Code Editor: To view and modify the files within the repository (e.g., VS Code, Sublime Text, Atom).
-
-	A Command Line Interface (CLI): You will be executing all Git commands through a terminal window (e.g., Terminal on Mac/Linux, Git Bash on Windows, or integrated terminal in your code editor).
-
-### 2. Installation Instructions
-
-Follow the steps below to set up your environment:
-
-### Installing
-
-This section provides a step-by-step guide to get your Git development environment running and ready for practice.
-
-### Step 1: Install Git
-
-The first step is installing the Git version control system on your computer.
+You will need:
 
 ```
-# On Windows, download and run the installer from git-scm.com.
-# On macOS (using Homebrew):
-brew install git
-
-# On Linux (Debian/Ubuntu):
-sudo apt update
-sudo apt install git
+- GCC (GNU Compiler Collection)
+- Git
+- Terminal or command line
+- Text editor or IDE
 ```
 
-### Step 2: Verify Git Installation
+### Installation
 
-Confirm that Git is installed correctly and accessible from your command line.
+Clone and navigate to the 0x01-hello_world directory:
 
-```
-# Check the installed version of Git
-git --version
-```
-
-### Step 3: Configure Your Git Identity
-
-Set your global user name and email. These credentials will be attached to every commit you make.
-
-```
-# Replace "Your Name" with your actual name
-git config --global user.name "Your Name"
-
-# Replace "your.email@example.com" with your actual email
-git config --global user.email "your.email@example.com"
-```
-### Step 4: Clone the Git Intro Repository
-
-Download a copy of this entire project repository onto your local machine.
-
-```
-# Navigate to the folder where you want to keep your projects
-cd ~/Projects
-
-# Clone the repository (Replace [REPOSITORY_URL] with the actual URL)
-git clone [REPOSITORY_URL]
-
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/0x01-hello_world
 ```
 
-### Step 5: Navigate into the Project Directory
+## 📋 Programs <a name = "programs"></a>
 
-Change your current directory in the terminal to the newly cloned project folder.
+### 0-positive_or_negative.c
+Determines whether a randomly assigned number is positive, negative, or zero. Your first introduction to conditional statements (if/else).
 
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-positive_or_negative.c -o positive_or_negative
+./positive_or_negative
+# Output: [number] is positive/negative/zero
 ```
-# Change directory into the cloned project folder
-cd git-intro
+
+Key concepts: Conditional statements, comparison operators, random number assignment
+
+**What it teaches:**
+- Using `if`, `else if`, and `else` statements
+- Comparison operators: `>`, `<`, `==`
+- Variable assignment and usage
+
+### 1-last_digit.c
+Prints the last digit of a randomly assigned number and tells whether it is greater than 5, less than 6 but not 0, or 0.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-last_digit.c -o last_digit
+./last_digit
+# Output: Last digit of [number] is [digit] and is [condition]
 ```
+
+Key concepts: Modulo operator, nested conditionals, digit extraction
+
+**What it teaches:**
+- Using the modulo operator (%) to extract digits
+- Multiple conditional branches
+- Formatting output with printf()
+
+### 2-print_alphabet.c
+Prints the alphabet in lowercase (a-z) using a loop. A simple introduction to loops.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-print_alphabet.c -o print_alphabet
+./print_alphabet
+# Output: abcdefghijklmnopqrstuvwxyz
+```
+
+Key concepts: For loops, character output, ASCII values
+
+**What it teaches:**
+- Using `for` loops for iteration
+- Character printing without newlines
+- Loop variable management
+
+### 3-print_alphabets.c
+Prints the alphabet in lowercase, then in uppercase (a-zA-Z). Demonstrates consecutive loops.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-print_alphabets.c -o print_alphabets
+./print_alphabets
+# Output: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+Key concepts: Multiple loops, character ranges, ASCII value differences
+
+**What it teaches:**
+- Chaining multiple loops together
+- Understanding case differences in ASCII
+- Loop structure and control
+
+### 4-print_alphabt.c
+Prints the alphabet in lowercase except for the letters q and z. Shows conditional logic within loops.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-print_alphabt.c -o print_alphabt
+./print_alphabt
+# Output: abcdefghijklmnoprstuvwxyw
+```
+
+Key concepts: Conditional statements in loops, character skipping
+
+**What it teaches:**
+- Using `if` statements inside `for` loops
+- Skip logic to exclude specific characters
+- Loop continuation and modification
+
+### 5-print_numbers.c
+Prints all digits from 0 to 9 on a single line. Your first numeric loop.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-print_numbers.c -o print_numbers
+./print_numbers
+# Output: 0123456789
+```
+
+Key concepts: Numeric loops, digit printing, putchar()
+
+**What it teaches:**
+- Iterating through numeric ranges
+- Using putchar() for single character output
+- Number to character conversion
+
+### 6-print_numberz.c
+Prints numbers from 0 to 9 except 2 and 4. Combines loops with conditional skipping.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-print_numberz.c -o print_numberz
+./print_numberz
+# Output: 0135678901357890135678901357890...
+```
+
+Key concepts: Loop with conditions, number skipping
+
+**What it teaches:**
+- Selecting which numbers to print
+- Skip logic for specific values
+- Loop flow control
+
+### 7-print_tebahpla.c
+Prints the alphabet in reverse order (z to a). Demonstrates backward iteration.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-print_tebahpla.c -o print_tebahpla
+./print_tebahpla
+# Output: zyxwvutsrqponmlkjihgfedcba
+```
+
+Key concepts: Reverse loops, decrementing loop variable
+
+**What it teaches:**
+- Using decrementing loops
+- Starting from high values and going down
+- Backward character output
+
+### 8-print_base16.c
+Prints all hexadecimal digits in lowercase (0-9, a-f). Introduces the hexadecimal number system.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-print_base16.c -o print_base16
+./print_base16
+# Output: 0123456789abcdef
+```
+
+Key concepts: Hexadecimal representation, character ranges, nested loops
+
+**What it teaches:**
+- Understanding hexadecimal (base 16)
+- Combining numeric and alphabetic characters
+- Extended character sequences
+
+### 9-print_comb.c
+Prints all possible single-digit combinations separated by commas and spaces. A classic beginner challenge.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 9-print_comb.c -o print_comb
+./print_comb
+# Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+```
+
+Key concepts: Loop with conditional formatting, separator logic
+
+**What it teaches:**
+- Adding separators (commas and spaces)
+- Conditional output based on loop position
+- Formatting program output properly
+
+### 100-print_comb3.c
+Prints all possible combinations of two different digits in ascending order. Introduces nested loops for combinations.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 100-print_comb3.c -o print_comb3
+./print_comb3
+# Output: 01, 02, 03, ..., 89
+```
+
+Key concepts: Nested loops, combination generation, ascending order
+
+**What it teaches:**
+- Using nested loops to generate combinations
+- Avoiding duplicate combinations
+- Maintaining ascending order
+
+### 101-print_comb4.c
+Prints all possible combinations of three different digits in ascending order.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 101-print_comb4.c -o print_comb4
+./print_comb4
+# Output: 012, 013, 014, ..., 789
+```
+
+Key concepts: Triple nested loops, three-digit combinations
+
+**What it teaches:**
+- Handling three levels of nesting
+- Preventing duplicate three-digit combinations
+- Complex loop control
+
+### 102-print_comb5.c
+Prints all possible combinations of two two-digit numbers in ascending order. The most complex combination program.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 102-print_comb5.c -o print_comb5
+./print_comb5
+# Output: 01 02, 01 03, 01 04, ..., 98 99
+```
+
+Key concepts: Complex nested loops, two-number combinations, formatting
+
+**What it teaches:**
+- Managing four levels of loop nesting
+- Creating combinations of two-digit numbers
+- Advanced formatting with spaces and commas
 
 ## 🎈 Usage <a name="usage"></a>
 
-This repository is designed to be used interactively via your Command Line Interface (CLI). Follow the guided tutorials within the project to practice essential Git commands.
+### General Compilation
 
-### 1. Locate the Tutorials
-
-Start by reviewing the main instructions and tutorials provided in the repository.
-
-```
-# List the contents of the project
-ls
-# Expected output: README.md, TUTORIALS/, PRACTICE_FILES/
-```
-### 2. Configure Your Practice File
-
-Navigate to the directory dedicated to practice and open the designated file in your code editor.
-Bash
-```
-# Change into the practice files directory
-cd PRACTICE_FILES
-
-# Open the main practice file in your editor (e.g., using 'code' for VS Code)
-code practice-workspace.txt
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 filename.c -o program_name
+./program_name
 ```
 
-### 3. Practice the Core Workflow
+### Understanding the Compiler Flags
 
-Follow the guided steps in the TUTORIALS/ folder. For each step, you will modify a file, stage the change, and commit it.
-```
-Action	Command to Practice	Purpose
-Make a Change	(Use your code editor)	Modify practice-workspace.txt by adding a line of text.
-Stage the Change	git add practice-workspace.txt	Tell Git which changes to include in the next snapshot (commit).
-Commit the Change	git commit -m "Added my first line"	Record the staged changes as a permanent snapshot in the project history.
-```
+- `-Wall`: Enable all common warning messages
+- `-Werror`: Treat warnings as errors
+- `-Wextra`: Enable extra warning messages
+- `-pedantic`: Strictly conform to C standards
+- `-std=gnu89`: Use the GNU89 C standard
 
-### 4. Practice Branching
+## 🔑 Key Concepts <a name = "key_concepts"></a>
 
-Once you are comfortable with commits, practice isolating your work on a new branch.
-Bash
-```
-# Create and switch to a new branch for feature work
-git checkout -b my-new-feature
-
-# Repeat the modify, add, and commit steps here...
-
-# Switch back to the main branch
-git checkout main
-```
-
-### 5. Review Your History
-
-Use the following command regularly to see how your changes and commits build the project's history.
-Bash
-```
-# View the commit history
-git log
-```
+- **Conditional Statements**: `if`, `else if`, `else` for decision making
+- **Comparison Operators**: `<`, `>`, `==`, `!=`, `<=`, `>=`
+- **Loops**: `for`, `while` for repetition
+- **Loop Variables**: Initialization, condition, increment
+- **Character Output**: `putchar()`, `printf()` for printing
+- **ASCII Values**: Understanding character-to-number conversion
+- **Modulo Operator**: Using `%` for remainder calculations
+- **Logical Operators**: `&&` (AND), `||` (OR), `!` (NOT)
+- **Nested Loops**: Loops within loops for combinations
+- **Formatting Output**: Proper spacing and separators
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Git](https://git-scm.com/) - The essential distributed version control system.
-- [Github](https://github.com/) - The platform used to host this repository and practice collaboration workflows.
-- [your Terminal/CLI]() - The main interface for executing all practice commands.
-- [VS Code (or your preferred editor)]() - The tool used for editing the exercise files.
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
+- [GCC](https://gcc.gnu.org/) - C Compiler
+- [Linux](https://www.linux.org/) - Operating System
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130)
+- [@hugou74130](https://github.com/hugou74130) - Complete work
+
+See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Holberton School for the curriculum and educational resources
+- The open-source community for development tools
+- All mentors and peers who contributed to the success of this project
