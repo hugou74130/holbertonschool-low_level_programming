@@ -1,146 +1,94 @@
-<p align="center">
-  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/argc_argv" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
+# 0x0A. C - argc, argv
 
-<h3 align="center">argc_argv - Command Line Arguments in C</h3>
+## 🧠 About
 
-<div align="center">
+This project is part of the **Low-Level Programming** track at **Holberton School**.  
+It focuses on understanding how to use command-line arguments in C programs, specifically the parameters `argc` (argument count) and `argv` (argument vector).
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
+You will learn how to:
+- Pass arguments to your program via the command line.
+- Count and print the number of arguments.
+- Access and print each argument individually.
+- Perform basic operations using arguments (e.g., multiplication, addition).
 
 ---
 
-<p align="center"> Learn how to handle command-line arguments in C using argc and argv parameters.
-    <br> 
-</p>
+## 📂 Project Files
 
-## 📝 Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Programs](#programs)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+| File Name | Description |
+|------------|-------------|
+| `0-whatsmyname.c` | Prints the program’s name followed by a new line. |
+| `1-args.c` | Prints the number of arguments passed to the program. |
+| `2-args.c` | Prints all arguments it receives, one per line. |
+| `3-mul.c` | Multiplies two numbers passed as arguments and prints the result. |
+| `4-add.c` | Adds positive numbers passed as arguments and prints the result. |
+| `main.h` | Header file containing function prototypes (if needed). |
 
-## 🧐 About <a name = "about"></a>
+---
 
-This project focuses on understanding and working with command-line arguments in C programming. The `argc` (argument count) and `argv` (argument vector) parameters are fundamental to creating interactive command-line programs that can receive input from users at runtime.
+## ⚙️ Compilation
 
-Through a series of practical exercises, you will learn how to access command-line arguments, count them, validate input, and build useful command-line tools. These skills are essential for systems programming and creating professional-grade utilities.
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-
-### Prerequisites
-
-You will need:
-
-```
-- GCC (GNU Compiler Collection)
-- Git
-- Terminal or command line
-- Basic understanding of C programming fundamentals
-```
-
-### Installation
-
-Clone and navigate to the argc_argv directory:
+All programs are compiled using the following command:
 
 ```bash
-git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
-cd holbertonschool-low_level_programming/argc_argv
+gcc -Wall -Werror -Wextra -pedantic *.c -o program_name
 ```
 
-## 📋 Programs <a name = "programs"></a>
-
-### 0-whatsmyname.c
-Prints the program's own name (the value of argv[0]). This demonstrates how to access the first argument, which is always the program name.
-
+Example for `0-whatsmyname.c`:
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-whatsmyname.c -o whatsmyname
-./whatsmyname
+gcc -Wall -Werror -Wextra -pedantic 0-whatsmyname.c -o myname
+./myname
 ```
 
-### 1-args.c
-Prints all command-line arguments passed to the program, each on a separate line. It shows how to iterate through the argv array.
+---
 
+## 🧩 Usage Examples
+
+### Example 1: Program Name
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-args.c -o args
-./args Hello World From C
+$ ./myname
+./myname
 ```
 
-### 2-args.c
-Displays all arguments with their count. This program combines argc and argv to show both the number of arguments and their values.
-
+### Example 2: Number of Arguments
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-args.c -o args2
-./args2 one two three
+$ ./count arg1 arg2 arg3
+3
 ```
 
-### 3-mul.c
-Multiplies two numbers passed as command-line arguments. This demonstrates converting string arguments to integers and performing calculations.
-
+### Example 3: Print All Arguments
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-mul.c -o mul
-./mul 5 3
+$ ./print_args Hello Holberton School
+./print_args
+Hello
+Holberton
+School
 ```
 
-### 4-add.c
-Adds all numbers passed as command-line arguments together. This shows how to handle multiple arguments and accumulate results.
-
+### Example 4: Multiply Two Numbers
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-add.c -o add
-./add 1 2 3 4 5
+$ ./mul 5 7
+35
 ```
 
-## 🎈 Usage <a name="usage"></a>
-
-Each program accepts command-line arguments. The basic syntax is:
-
+### Example 5: Add Positive Numbers
 ```bash
-./program_name argument1 argument2 argument3 ...
+$ ./add 10 20 5
+35
 ```
 
-Key concepts:
-- **argc**: The count of arguments (including the program name)
-- **argv[0]**: Always the program name
-- **argv[1]**, **argv[2]**, etc.: The actual user-provided arguments
-- **argv[argc]**: Always NULL (end of array marker)
+---
 
-Example workflow:
+## 🧮 Concepts Practiced
 
-```bash
-# Compile all programs
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-whatsmyname.c -o whatsmyname
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-args.c -o args
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-mul.c -o mul
+- `int main(int argc, char *argv[])`
+- Iterating through command-line arguments.
+- Using `atoi()` to convert strings to integers.
+- Handling incorrect argument counts.
+- Input validation and error messages.
 
-# Run them with different arguments
-./whatsmyname
-./args Hello Beautiful World
-./mul 12 5
-```
+---
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## ✍️ Author
 
-- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
-- [GCC](https://gcc.gnu.org/) - C Compiler
-- [Linux](https://www.linux.org/) - Operating System
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@hugou74130](https://github.com/hugou74130) - Complete work
-
-See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Holberton School for the curriculum and educational resources
-- The open-source community for development tools
-- All mentors and peers who contributed to the success of this project
+- [@hugou74130](https://github.com/hugou74130)
