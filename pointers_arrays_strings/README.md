@@ -1,29 +1,29 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=400px height=400px src="https://image.noelshack.com/fichiers/2025/45/3/1762375639-gemini-generated-image-aglxqiaglxqiaglx.png" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/pointers_arrays_strings" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Git intro</h3>
+<h3 align="center">pointers_arrays_strings - Pointers, Arrays, and String Manipulation</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> This project serves as a practical and accessible introductory guide for those new to Git and GitHub. It provides a safe learning environment to master the basic commands and understand the fundamental principles of distributed version control.
-	<br>
+<p align="center"> Master pointers, arrays, and string manipulation in C programming.
+    <br> 
 </p>
 
 ## 📝 Table of Contents
-
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Programs](#programs)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
@@ -31,162 +31,368 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project is crucial for mastering C programming fundamentals. You will learn to work with pointers (addresses and dereferencing), arrays (multi-dimensional and single), and strings (creation, manipulation, comparison). These concepts are the backbone of systems programming and memory management in C.
+
+Through practical exercises, you'll understand memory addresses, pass by reference, dynamic memory concepts, and implement classic string manipulation functions. This knowledge is essential for writing efficient C programs and understanding how modern programming languages handle memory.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-This "Git Intro" repository is a dedicated, hands-on learning resource created specifically for beginners who are taking their first steps with Git and GitHub. The primary purpose of this project is to demystify version control, transitioning you from confusion to confidence by providing a safe, controlled environment for practice. We focus on the absolute essentials, ensuring you grasp the core concepts and master fundamental commands like clone, add, commit, push, and pull without the pressure of a complex, live production project.
-
-The ultimate goal is to equip you with the practical knowledge necessary to collaborate effectively and manage your own code history. By providing clear, step-by-step exercises and files explicitly designed for experimentation, this project ensures you can gain true mastery over the basic Git workflow. Use this space to make mistakes, learn from them, and firmly establish the foundational skills required before moving on to larger, team-based development projects.
 ### Prerequisites
 
-To get started with this project and practice the Git commands, you primarily need two things installed on your system: Git and a Code Editor.
-
-### 1. Prerequisites
-
-Before starting, ensure you have the following installed:
-
-	Git: The version control system itself.
-
-	A Code Editor: To view and modify the files within the repository (e.g., VS Code, Sublime Text, Atom).
-
-	A Command Line Interface (CLI): You will be executing all Git commands through a terminal window (e.g., Terminal on Mac/Linux, Git Bash on Windows, or integrated terminal in your code editor).
-
-### 2. Installation Instructions
-
-Follow the steps below to set up your environment:
-
-### Installing
-
-This section provides a step-by-step guide to get your Git development environment running and ready for practice.
-
-### Step 1: Install Git
-
-The first step is installing the Git version control system on your computer.
+You will need:
 
 ```
-# On Windows, download and run the installer from git-scm.com.
-# On macOS (using Homebrew):
-brew install git
-
-# On Linux (Debian/Ubuntu):
-sudo apt update
-sudo apt install git
+- GCC (GNU Compiler Collection)
+- Git
+- Terminal or command line
+- Understanding of basic C syntax and functions
 ```
 
-### Step 2: Verify Git Installation
+### Installation
 
-Confirm that Git is installed correctly and accessible from your command line.
+Clone and navigate to the pointers_arrays_strings directory:
 
-```
-# Check the installed version of Git
-git --version
-```
-
-### Step 3: Configure Your Git Identity
-
-Set your global user name and email. These credentials will be attached to every commit you make.
-
-```
-# Replace "Your Name" with your actual name
-git config --global user.name "Your Name"
-
-# Replace "your.email@example.com" with your actual email
-git config --global user.email "your.email@example.com"
-```
-### Step 4: Clone the Git Intro Repository
-
-Download a copy of this entire project repository onto your local machine.
-
-```
-# Navigate to the folder where you want to keep your projects
-cd ~/Projects
-
-# Clone the repository (Replace [REPOSITORY_URL] with the actual URL)
-git clone [REPOSITORY_URL]
-
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/pointers_arrays_strings
 ```
 
-### Step 5: Navigate into the Project Directory
+## 📋 Programs <a name = "programs"></a>
 
-Change your current directory in the terminal to the newly cloned project folder.
+### Pointer Manipulation
 
+#### 0-reset_to_98.c
+Takes a pointer to an int and sets the value it points to as 98. Demonstrates dereferencing pointers and modifying values through references.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-reset_to_98.c main.c -o reset_to_98
+./reset_to_98
 ```
-# Change directory into the cloned project folder
-cd git-intro
+
+Key concepts: Pointer dereferencing, pass by reference, memory modification
+
+#### 1-swap.c
+Swaps the values of two integers using pointers. Shows how to exchange variable values without returning multiple values.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-swap.c main.c -o swap
+./swap
 ```
+
+Key concepts: Pointer parameters, value swapping, temporary variables
+
+### Array Reversal
+
+#### 4-rev_array.c
+Reverses the content of an array of integers in place. Demonstrates array manipulation and two-pointer technique.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-rev_array.c main.c -o rev_array
+./rev_array
+```
+
+Key concepts: Array indexing, in-place reversal, two-pointer approach
+
+### String Output and Manipulation
+
+#### 2-strlen.c
+Calculates and returns the length of a string. A custom implementation of the standard `strlen()` function.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-strlen.c main.c -o strlen
+./strlen
+```
+
+Key concepts: String traversal, null terminator, character counting
+
+#### 3-puts.c
+Prints a string followed by a newline, without using `printf()`. Similar to the standard `puts()` function.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-puts.c main.c -o puts
+./puts
+```
+
+Key concepts: String printing, character iteration, newline handling
+
+#### 4-print_rev.c
+Prints a string in reverse order. Combines string traversal with reversal logic.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-print_rev.c main.c -o print_rev
+./print_rev
+```
+
+Key concepts: String reversal, backward iteration, pointer arithmetic
+
+#### 5-rev_string.c
+Reverses a string in place (modifies the original string). Different from print_rev as it actually changes the string content.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-rev_string.c main.c -o rev_string
+./rev_string
+```
+
+Key concepts: In-place reversal, string modification, array swapping
+
+#### 6-puts2.c
+Prints every other character of a string, starting with the first character. Demonstrates selective character printing.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-puts2.c main.c -o puts2
+./puts2
+# Input: "Hello" -> Output: "Hlo"
+```
+
+Key concepts: Conditional iteration, step counting, character skipping
+
+#### 7-puts_half.c
+Prints the second half of a string. Shows how to calculate string midpoint and iterate from there.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-puts_half.c main.c -o puts_half
+./puts_half
+```
+
+Key concepts: String length calculation, midpoint calculation, partial printing
+
+### String Concatenation and Copying
+
+#### 0-strcat.c
+Concatenates two strings (appends src to dest). A custom implementation of the standard `strcat()` function.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-strcat.c main.c -o strcat
+./strcat
+```
+
+Key concepts: String concatenation, null terminator handling, buffer management
+
+#### 1-strncat.c
+Concatenates n bytes of src to dest. A safer version that limits concatenation length to prevent buffer overflow.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-strncat.c main.c -o strncat
+./strncat
+```
+
+Key concepts: Bounded concatenation, overflow prevention, buffer safety
+
+#### 2-strncpy.c
+Copies n characters from src to dest. A bounded version of `strcpy()` that prevents buffer overflow.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-strncpy.c main.c -o strncpy
+./strncpy
+```
+
+Key concepts: Bounded copying, null terminator, memory safety
+
+#### 9-strcpy.c
+Copies a string from src to dest. A custom implementation of the standard `strcpy()` function.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 9-strcpy.c main.c -o strcpy
+./strcpy
+```
+
+Key concepts: String copying, pointer advancement, memory copying
+
+### String Comparison and Search
+
+#### 3-strcmp.c
+Compares two strings and returns an integer indicating their relationship. Custom implementation of `strcmp()`.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-strcmp.c main.c -o strcmp
+./strcmp
+```
+
+Key concepts: String comparison, character-by-character comparison, return values
+
+#### 2-strchr.c
+Locates the first occurrence of a character in a string and returns a pointer to it. Similar to standard `strchr()`.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-strchr.c main.c -o strchr
+./strchr
+```
+
+Key concepts: Character search, pointer returns, null terminator
+
+#### 3-strspn.c
+Returns the number of bytes in a string consisting of characters from a set of bytes.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-strspn.c main.c -o strspn
+./strspn
+```
+
+Key concepts: Character set matching, prefix calculation, string analysis
+
+#### 4-strpbrk.c
+Searches a string for any of a set of bytes and returns a pointer to the first match found.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-strpbrk.c main.c -o strpbrk
+./strpbrk
+```
+
+Key concepts: Character set searching, pointer returns, pattern matching
+
+#### 5-strstr.c
+Locates a substring within a string and returns a pointer to its first occurrence.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-strstr.c main.c -o strstr
+./strstr
+```
+
+Key concepts: Substring search, nested loops, pattern finding
+
+### String Case Conversion
+
+#### 5-string_toupper.c
+Converts all lowercase letters in a string to uppercase. Demonstrates character manipulation.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-string_toupper.c main.c -o string_toupper
+./string_toupper
+# Input: "Hello World" -> Output: "HELLO WORLD"
+```
+
+Key concepts: ASCII values, character conversion, string modification
+
+#### 6-cap_string.c
+Capitalizes the first character of each word in a string. Shows conditional character replacement.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-cap_string.c main.c -o cap_string
+./cap_string
+# Input: "hello world" -> Output: "Hello World"
+```
+
+Key concepts: Word boundaries, character case conversion, iteration logic
+
+#### 7-leet.c
+Replaces certain letters with numbers (1337 speak): a→4, e→3, o→0, t→7, l→1. A fun string encoding exercise.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-leet.c main.c -o leet
+./leet
+# Input: "hello world" -> Output: "h3ll0 w0rld"
+```
+
+Key concepts: Character replacement, lookup patterns, custom encoding
+
+### Memory Operations
+
+#### 0-memset.c
+Fills the first n bytes of a memory area with a specific constant byte. Custom implementation of `memset()`.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-memset.c main.c -o memset
+./memset
+```
+
+Key concepts: Memory manipulation, byte operations, bulk memory filling
+
+#### 1-memcpy.c
+Copies n bytes from memory area src to memory area dest. Custom implementation of `memcpy()`.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-memcpy.c main.c -o memcpy
+./memcpy
+```
+
+Key concepts: Memory copying, byte-by-byte operations, non-overlapping memory
+
+### Array Operations
+
+#### 8-print_array.c
+Prints n elements of an array of integers, separated by commas and spaces.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-print_array.c main.c -o print_array
+./print_array
+```
+
+Key concepts: Array iteration, formatted output, delimiter handling
+
+#### 7-print_chessboard.c
+Prints a chessboard pattern or any 2D array of characters. Demonstrates 2D array manipulation.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-print_chessboard.c main.c -o print_chessboard
+./print_chessboard
+```
+
+Key concepts: 2D arrays, nested loops, multi-dimensional array access
+
+#### 8-print_diagsums.c
+Prints the sum of the diagonals of a square 2D array of integers.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-print_diagsums.c main.c -o print_diagsums
+./print_diagsums
+```
+
+Key concepts: 2D array navigation, diagonal calculation, matrix operations
+
+### String to Number Conversion
+
+#### 100-atoi.c
+Converts a string to an integer. A custom implementation of the standard `atoi()` function with sign and digit handling.
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 100-atoi.c main.c -o atoi
+./atoi
+```
+
+Key concepts: String parsing, digit extraction, sign handling, accumulation
 
 ## 🎈 Usage <a name="usage"></a>
 
-This repository is designed to be used interactively via your Command Line Interface (CLI). Follow the guided tutorials within the project to practice essential Git commands.
+### General Compilation
 
-### 1. Locate the Tutorials
-
-Start by reviewing the main instructions and tutorials provided in the repository.
-
-```
-# List the contents of the project
-ls
-# Expected output: README.md, TUTORIALS/, PRACTICE_FILES/
-```
-### 2. Configure Your Practice File
-
-Navigate to the directory dedicated to practice and open the designated file in your code editor.
-Bash
-```
-# Change into the practice files directory
-cd PRACTICE_FILES
-
-# Open the main practice file in your editor (e.g., using 'code' for VS Code)
-code practice-workspace.txt
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 filename.c main.c -o program_name
+./program_name
 ```
 
-### 3. Practice the Core Workflow
+### Pointer and Memory Understanding
 
-Follow the guided steps in the TUTORIALS/ folder. For each step, you will modify a file, stage the change, and commit it.
-```
-Action	Command to Practice	Purpose
-Make a Change	(Use your code editor)	Modify practice-workspace.txt by adding a line of text.
-Stage the Change	git add practice-workspace.txt	Tell Git which changes to include in the next snapshot (commit).
-Commit the Change	git commit -m "Added my first line"	Record the staged changes as a permanent snapshot in the project history.
-```
+- Pointers store memory addresses
+- `&variable` gets the address of a variable
+- `*pointer` dereferences a pointer to access the value
+- Arrays are pointers to their first element
+- Strings are arrays of characters ending with '\0'
 
-### 4. Practice Branching
+## 🔑 Key Concepts <a name = "key_concepts"></a>
 
-Once you are comfortable with commits, practice isolating your work on a new branch.
-Bash
-```
-# Create and switch to a new branch for feature work
-git checkout -b my-new-feature
-
-# Repeat the modify, add, and commit steps here...
-
-# Switch back to the main branch
-git checkout main
-```
-
-### 5. Review Your History
-
-Use the following command regularly to see how your changes and commits build the project's history.
-Bash
-```
-# View the commit history
-git log
-```
+- **Pointers**: Memory addresses, dereferencing, pointer arithmetic
+- **Arrays**: Single and multi-dimensional, indexing, iteration
+- **Strings**: Character arrays, null terminator, string operations
+- **Memory Operations**: `memcpy()`, `memset()`, byte operations
+- **String Functions**: Concatenation, copying, comparison, searching
+- **Character Manipulation**: Case conversion, encoding
+- **Buffer Safety**: Bounded operations to prevent overflow
+- **Pass by Reference**: Modifying values through pointers
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Git](https://git-scm.com/) - The essential distributed version control system.
-- [Github](https://github.com/) - The platform used to host this repository and practice collaboration workflows.
-- [your Terminal/CLI]() - The main interface for executing all practice commands.
-- [VS Code (or your preferred editor)]() - The tool used for editing the exercise files.
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
+- [GCC](https://gcc.gnu.org/) - C Compiler
+- [Linux](https://www.linux.org/) - Operating System
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130)
+- [@hugou74130](https://github.com/hugou74130) - Complete work
+
+See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Holberton School for the curriculum and educational resources
+- The open-source community for development tools
+- All mentors and peers who contributed to the success of this project
