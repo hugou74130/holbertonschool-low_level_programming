@@ -12,8 +12,6 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 
 </div>
-## 🧠 About
-
 This project is part of the **Low-Level Programming** track at **Holberton School**.  
 It focuses on understanding how to use command-line arguments in C programs, specifically the parameters `argc` (argument count) and `argv` (argument vector).
 
@@ -104,4 +102,5 @@ $ ./add 10 20 5
 ## ✍️ Author
 
 - [@hugou74130](https://github.com/hugou74130)
+
 
