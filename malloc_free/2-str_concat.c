@@ -2,6 +2,18 @@
 #include <string.h>
 #include "main.h"
 
+/**
+ * str_concat - Concatène deux chaînes de caractères
+ * @s1: Première chaîne
+ * @s2: Deuxième chaîne
+ *
+ * Alloue une nouvelle chaîne contenant les caractères de s1
+ * suivis des caractères de s2. Si s1 ou s2 est NULL, elle est
+ * traitée comme une chaîne vide.
+ *
+ * Return: Pointeur vers la nouvelle chaîne allouée, NULL en cas d'erreur
+ */
+
 char *str_concat(char *s1, char *s2)
 {
 	size_t len1;
