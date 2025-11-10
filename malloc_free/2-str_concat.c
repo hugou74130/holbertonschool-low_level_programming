@@ -8,8 +8,21 @@ char *str_concat(char *s1, char *s2)
 	size_t len2;
 	char *result;
 
-	len1 = s1 ? strlen(s1) : 0;
-	len2 = s2 ? strlen(s2) : 0;
+	len1 = s1;
+	if (s1)
+	{
+		while (s1[len1])
+
+			len1++;
+	}
+	len2 = s2;
+	if (s2)
+	{
+		while (s2[len2])
+
+			len2++;
+	}
+
 	return (NULL);
 
 	result = malloc(len1 + len2 + 1);
