@@ -6,7 +6,7 @@ char *str_concat(char *s1, char *s2)
 {
 	size_t len1;
 	size_t len2;
-	int *result;
+	char *result;
 
 	len1 = s1 ? strlen(s1) : 0;
 	len2 = s2 ? strlen(s2) : 0;
