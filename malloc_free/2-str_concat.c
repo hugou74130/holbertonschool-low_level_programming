@@ -14,8 +14,8 @@ char *str_concat(char *s1, char *s2)
 
 	result = malloc(len1 + len2 + 1);
 	if (result == NULL)
-		;
-	return (NULL);
+
+		return (NULL);
 
 	if (s1)
 		strcpy(result, s1);
