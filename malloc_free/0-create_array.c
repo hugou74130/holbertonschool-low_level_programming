@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * create_array - Crée un tableau de caractères
- * et l'initialise avec un caractère spécifique.
- * @size: La taille du tableau à créer (unsigned int).
- * @c: Le caractère utilisé pour l'initialisation.
+ * create_array - Creates a character array and initializes it
+ * with a specific character.
+ * @size: The size of the array to create (unsigned int)
+ * @c: The character used for initialization
  *
- * Retourne: Un pointeur vers le tableau alloué,
- * ou NULL si la taille est 0 ou si l'allocation mémoire échoue.
+ * Return: A pointer to the allocated array, or NULL if size is 0
+ * or if memory allocation fails
  */
 
 char *create_array(unsigned int size, char c)
