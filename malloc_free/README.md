@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
- <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/46/1/1762796733-gemini-generated-image-xh64fjxh64fjxh64.jpg" alt="Project logo"></a>
+ <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762796733-gemini-generated-image-xh64fjxh64fjxh64.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">c_basics - C Programming Fundamentals</h3>
