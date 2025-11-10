@@ -3,7 +3,7 @@
  <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762796733-gemini-generated-image-xh64fjxh64fjxh64.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">c_basics - C Programming Fundamentals</h3>
+<h3 align="center">Malloc_free - C Programming Fundamentals</h3>
 
 <div align="center">
 
@@ -65,3 +65,4 @@ For example, to test the `_strdup` function (if it is in `1-strdup.c` and tested
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-main.c 1-strdup.c -o 1-strdup
 ./1-strdup
+
