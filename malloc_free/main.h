@@ -16,5 +16,4 @@ void print_to_98(int n);
 void print_times_table(int n);
 void print_number(int n);
 char *create_array(unsigned int size, char c);
-s
 #endif /* MAIN_H */
