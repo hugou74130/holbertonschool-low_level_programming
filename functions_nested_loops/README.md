@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
- <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762796733-gemini-generated-image-xh64fjxh64fjxh64.jpg" alt="Project logo"></a>
+ <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762797453-gemini-generated-image-prnih9prnih9prni.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">C - Functions, Nested Loops - C Programming Fundamentals</h3>
@@ -109,4 +109,5 @@ $ ./fibonacci
 ## ✍️ Author
 
 - [@hugou74130](https://github.com/hugou74130)
+
 
