@@ -60,6 +60,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 
-	result[len1 + 1] = '\0';
+	result[len1 + i] = '\0';
 	return (result);
 }
