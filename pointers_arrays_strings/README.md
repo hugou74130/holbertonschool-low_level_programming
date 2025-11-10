@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/pointers_arrays_strings" rel="noopener">
- <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/46/1/1762797764-gemini-generated-image-p74trdp74trdp74t.jpg" alt="Project logo"></a>
+ <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762797764-gemini-generated-image-p74trdp74trdp74t.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">pointers_arrays_strings - Pointers, Arrays, and String Manipulation</h3>
@@ -396,4 +396,5 @@ See also the list of [contributors](https://github.com/hugou74130/holbertonschoo
 - Holberton School for the curriculum and educational resources
 - The open-source community for development tools
 - All mentors and peers who contributed to the success of this project
+
 
