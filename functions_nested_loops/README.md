@@ -1,7 +1,17 @@
-# 0x02. C - Functions, Nested Loops
+<p align="center">
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
+ <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762796733-gemini-generated-image-xh64fjxh64fjxh64.jpg" alt="Project logo"></a>
+</p>
 
-## 🧠 About
+<h3 align="center">C - Functions, Nested Loops - C Programming Fundamentals</h3>
 
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
+
+</div>
 This project is part of the **Low-Level Programming** track at **Holberton School**.  
 It focuses on understanding **functions**, **nested loops**, and how to organize code for reusability and efficiency.
 
@@ -99,3 +109,4 @@ $ ./fibonacci
 ## ✍️ Author
 
 - [@hugou74130](https://github.com/hugou74130)
+
