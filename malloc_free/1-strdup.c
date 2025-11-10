@@ -3,7 +3,8 @@
 #include "main.h"
 
 /**
- * _strdup - Duplique une chaîne de caractères dans une nouvelle zone mémoire
+ * _strdup - Duplique une chaîne de
+ * caractères dans une nouvelle zone mémoire
  * @str: La chaîne à dupliquer
  *
  * Return: Un pointeur vers la chaîne dupliquée, ou NULL si str est NULL
