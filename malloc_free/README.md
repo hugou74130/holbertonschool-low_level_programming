@@ -1,10 +1,19 @@
-# C - malloc, free
+<p align="center">
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-## Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](__../____CONTRIBUTING.md__)
+<h3 align="center">c_basics - C Programming Fundamentals</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
 
 ## About <a name = "about"></a>
 This project is part of the "low-level programming" curriculum at Holberton School. The main objective is to understand and implement dynamic memory management functions in C, similar to `malloc` and `free`.
