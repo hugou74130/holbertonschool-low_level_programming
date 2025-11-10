@@ -7,6 +7,7 @@ char *str_concat(char *s1, char *s2)
 	size_t len1;
 	size_t len2;
 	char *result;
+	int i;
 
 	len1 = 0;
 	if (s1)
@@ -22,8 +23,6 @@ char *str_concat(char *s1, char *s2)
 
 			len2++;
 	}
-
-	return (NULL);
 
 	result = malloc(len1 + len2 + 1);
 	if (result == NULL)
