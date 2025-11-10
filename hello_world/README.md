@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762797557-gemini-generated-image-s56jz3s56jz3s56j.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">c_basics - C Programming Fundamentals</h3>
@@ -208,3 +208,4 @@ See also the list of [contributors](https://github.com/hugou74130/holbertonschoo
 - Holberton School for the curriculum and educational resources
 - The open-source community for development tools
 - All mentors and peers who contributed to the success of this project
+
