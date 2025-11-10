@@ -7,6 +7,7 @@ char *str_concat(char *s1, char *s2)
 	size_t len1;
 	size_t len2;
 	char *result;
+	size_t i;
 
 	len1 = 0;
 	if (s1)
@@ -28,13 +29,27 @@ char *str_concat(char *s1, char *s2)
 
 		return (NULL);
 
+	i = 0;
 	if (s1)
-		strcpy(result, s1);
+	{
+		while (s1[i])
+		{
+			result[i] = s1[i];
+			i++;
+		}
+	}
 
-	else
-		result[0] = '\0';
-
+	i = 0;
 	if (s2)
-		strcat(result, s2);
+	{
+		while (s2[i])
+		{
+			result[len1 + i] = s2[i];
+			i++;
+		}
+	}
+
+	result[len1 + len2] = '\0';
+
 	return (result);
 }
