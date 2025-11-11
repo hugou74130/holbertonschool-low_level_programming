@@ -5,15 +5,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *arr;
+	char *arr;
+	unsigned int total;
+	unsigned int i;
+
 	if (nmemb == 0 || size == 0)
 		return (NULL);
+	total = nmemb * size;
 
-	arr = malloc(nmemb * size);
+	arr = malloc(total);
 
 	if (arr == NULL)
 		return (NULL);
 
-	memset(arr, 0, nmemb * size);
-	return (arr);
+	for (i = 0; i < total; i++)
+		arr[i] = 0;
+
+	return ((void *)arr);
 }
