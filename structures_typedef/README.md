@@ -1,22 +1,21 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/structures_typedef" rel="noopener">
+ <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/46/3/1762947447-gemini-generated-image-vmwjiwvmwjiwvmwj.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Structures et Typedef en C</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Ce projet explore l'utilisation des structures et du mot-clé `typedef` en langage C, des outils essentiels pour organiser les données de manière complexe et améliorer la lisibilité du code.
     <br>
 </p>
 
@@ -24,91 +23,72 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Ce projet fait partie du cursus Holberton School et se concentre sur la compréhension et l'implémentation des structures en C, ainsi que sur l'utilisation de `typedef` pour créer des alias de types. Les structures permettent de regrouper des variables de différents types sous un même nom, offrant une manière structurée de manipuler des données complexes. Le mot-clé `typedef` simplifie la déclaration de variables de ces types complexes, rendant le code plus concis et plus facile à lire.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Ces instructions vous permettront d'obtenir une copie du projet et de le faire fonctionner sur votre machine locale à des fins de développement et de test.
 
-### Prerequisites
+### Prérequis
 
-What things you need to install the software and how to install them.
+Pour compiler et exécuter les fichiers C de ce projet, vous aurez besoin d'un compilateur C comme GCC.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
+```bash
+sudo apt update
+sudo apt install gcc
 ```
 
-And repeat
+### Installation
 
-```
-until finished
-```
+Clonez le dépôt sur votre machine locale :
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
 ```
 
-### And coding style tests
+Naviguez vers le répertoire des structures et typedef :
 
-Explain what these tests test and why
-
+```bash
+cd holbertonschool-low_level_programming/structures_typedef
 ```
-Give an example
+
+Vous pouvez ensuite compiler n'importe quel fichier C dans ce répertoire. Par exemple, pour compiler 0-init_dog.c :
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-init_dog.c -o init_dog
+```
+
+Et pour l'exécuter :
+
+```bash
+./init_dog
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Ce répertoire contient divers fichiers C illustrant l'utilisation des structures et de typedef. Chaque fichier est un exemple indépendant et peut être compilé et exécuté comme décrit dans la section "Installation".
 
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
+Par exemple, pour comprendre comment initialiser une structure dog, compilez et exécutez le fichier 0-init_dog.c. Pour voir comment typedef est utilisé pour simplifier la déclaration d'une structure, examinez les fichiers qui l'utilisent.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) - Langage de programmation
+- [GCC](https://gcc.gnu.org/) - Compilateur C
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@hugou74130](https://github.com/hugou74130) - Travail initial et développement
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+Voir aussi la liste des [contributeurs](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) qui ont participé à ce projet.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Holberton School pour le programme et l'inspiration.
+- La communauté C pour les innombrables ressources et documentations.
