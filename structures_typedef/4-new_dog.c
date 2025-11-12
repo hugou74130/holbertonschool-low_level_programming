@@ -24,14 +24,13 @@ unsigned int i;
 int len;
 d = malloc(sizeof(dog_t));
 if (d == NULL)
-	return (NULL);
+return (NULL);
 len = 0;
 while (name[len])
 ++len;
-
 d->name = malloc(len + 1);
 if (d->name == NULL)
-{		
+{	
 free(d);
 return (NULL);
 }
