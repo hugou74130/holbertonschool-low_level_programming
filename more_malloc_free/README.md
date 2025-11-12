@@ -1,210 +1,102 @@
 <p align="center">
-  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/c_basics" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/more_malloc_free" rel="noopener">
+ <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/46/3/1762948631-gemini-generated-image-xz7ysqxz7ysqxz7y.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">c_basics - C Programming Fundamentals</h3>
+<h3 align="center">Gestion Avancée de la Mémoire (more_malloc_free)</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-</div>
+Ce projet explore des techniques avancées de gestion de la mémoire dynamique en C, en se concentrant sur `malloc`, `free`, et `realloc`.
 
----
+## 📝 Table des matières
 
-<p align="center"> Learn the fundamentals of C programming, from preprocessing to compilation and basic output.
-    <br> 
-</p>
+- [À propos](#à-propos)
+- [Démarrage](#démarrage)
+- [Utilisation](#utilisation)
+- [Technologies utilisées](#technologies-utilisées)
+- [Auteurs](#auteurs)
+- [Remerciements](#remerciements)
 
-## 📝 Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Programs](#programs)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+## 🧐 À propos
 
-## 🧐 About <a name = "about"></a>
+Ce projet, faisant partie du cursus Holberton School, approfondit les concepts de gestion de la mémoire dynamique en C. Il ne se contente pas de `malloc` et `free` de base, mais explore également la fonction `realloc` pour redimensionner la mémoire, les stratégies de gestion des échecs d'allocation, et l'allocation d'espaces mémoires plus complexes comme les tableaux de pointeurs (souvent utilisés pour simuler des tableaux à deux dimensions).
 
-This project covers the fundamental concepts of C programming, including the compilation process, preprocessing, and basic program output. You will learn how the C compiler works, how to use the preprocessor, and how to write simple programs that display information.
+L'objectif est de maîtriser l'allocation, la libération et la réallocation de la mémoire de manière sûre et efficace, en évitant les fuites de mémoire et les erreurs de segmentation.
 
-These foundational skills are essential for any C programmer and will help you understand what happens behind the scenes when you write and compile a C program. From source code to executable, you'll gain insight into each step of the compilation pipeline.
+## 🏁 Démarrage
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+Ces instructions vous permettront d'obtenir une copie du projet et de le faire fonctionner sur votre machine locale à des fins de développement et de test.
 
-### Prerequisites
+### Prérequis
 
-You will need:
+Pour compiler et exécuter les fichiers C de ce projet, vous aurez besoin d'un compilateur C comme GCC.
 
-```
-- GCC (GNU Compiler Collection)
-- Git
-- Terminal or command line
-- Basic understanding of Linux commands
+```bash
+sudo apt update
+sudo apt install gcc
 ```
 
 ### Installation
 
-Clone and navigate to the c_basics directory:
+Clonez le dépôt sur votre machine locale :
 
 ```bash
 git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
-cd holbertonschool-low_level_programming/c_basics
 ```
 
-## 📋 Programs <a name = "programs"></a>
-
-### 0-preprocessor
-A script that runs a C file through the C preprocessor and saves the output in another file. This shows what the preprocessor does before actual compilation.
+Naviguez vers le répertoire du projet :
 
 ```bash
-./0-preprocessor main.c
-# Creates main.i with all preprocessor directives expanded
+cd holbertonschool-low_level_programming/more_malloc_free
 ```
 
-Key concepts: Macro expansion, include file processing, conditional compilation
-
-### 1-compiler
-A script that compiles a C file into an object file without linking. This creates the intermediate .o file.
+Vous pouvez ensuite compiler n'importe quel fichier C dans ce répertoire. Par exemple, pour compiler `0-malloc_checked.c` (en le liant à un fichier `main.c` s'il est fourni) :
 
 ```bash
-./1-compiler main.c
-# Creates main.o (object file)
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-malloc_checked.c main_0.c -o 0-malloc_checked
 ```
 
-Key concepts: Compilation stages, object files, symbol tables
-
-### 2-assembler
-A script that compiles a C file into assembly code (.s file). Shows the assembly representation of your C code.
+Et pour l'exécuter :
 
 ```bash
-./2-assembler main.c
-# Creates main.s (assembly file)
+./0-malloc_checked
 ```
 
-Key concepts: Assembly language, CPU instructions, low-level representation
+## 🎈 Utilisation
 
-### 3-name
-A script that compiles a C file and names the executable with a custom name. Demonstrates the complete compilation and linking process.
+Ce répertoire contient une série de fichiers, chacun résolvant un problème spécifique lié à la gestion de la mémoire :
 
-```bash
-./3-name main.c
-# Creates an executable (with custom naming)
-```
+- **0-malloc_checked.c** : Implémente une fonction qui alloue de la mémoire en utilisant malloc et gère les échecs d'allocation en terminant le programme.
 
-Key concepts: Linking, executable creation, naming conventions
+- **1-string_nconcat.c** : Concatène deux chaînes de caractères en utilisant malloc.
 
-### 4-puts.c
-A simple C program that uses the `puts()` function to display text. Demonstrates basic output using the standard library.
+- **2-calloc.c** : Implémente une fonction simulant calloc (allocation avec initialisation à zéro) en utilisant malloc.
 
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c -o puts
-./puts
-# Output: Programming is like building a multilingual puzzle
-```
+- **3-array_range.c** : Crée un tableau d'entiers contenant une plage de valeurs.
 
-Key concepts: Standard library functions, string handling, output streams
+- **100-realloc.c** : Implémente une fonction simulant realloc.
 
-### 5-printf.c
-Uses the `printf()` function to format and display text. Shows how to use one of the most powerful I/O functions in C.
+- **101-mul.c** : Un programme qui multiplie deux grands nombres positifs, nécessitant une gestion dynamique de la mémoire pour les résultats.
 
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-printf.c -o printf
-./printf
-# Output: with proper formatting
-```
+Chaque fichier peut être compilé et testé individuellement pour comprendre le concept qu'il illustre.
 
-Key concepts: Format specifiers, variable output, formatted I/O
+## ⛏️ Technologies utilisées
 
-### 6-size.c
-Prints the size of various data types on your system using the `sizeof` operator. Helps you understand memory layout and data type sizes.
+- **Langage C** - Langage de programmation
+- **GCC** - Compilateur C
 
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-size.c -o size
-./size
-# Output: Displays sizes of int, long, long long, float, char, etc.
-```
+## ✍️ Auteurs
 
-Key concepts: Memory management, data types, system-dependent sizes, `sizeof` operator
+- **@hugou74130** - Travail initial et développement
 
-### 100-intel
-A script that generates Intel assembly syntax instead of the default AT&T syntax. Shows how to customize the compilation output.
+Voir aussi la liste des contributeurs qui ont participé à ce projet.
 
-```bash
-./100-intel main.c
-# Creates main.s with Intel syntax
-```
+## 🎉 Remerciements
 
-Key concepts: Assembly syntax variations, compiler flags, optimization
-
-### 101-quote.c
-A program that prints a specific quote (exactly as written) to the standard error output using `write()`. This demonstrates low-level I/O.
-
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 101-quote.c -o quote
-./quote
-# Output: and that piece of art is useful" - Dora Korpar, 2015-10-19
-```
-
-Key concepts: Standard error stream (stderr), system calls, precise character output
-
-## 🎈 Usage <a name="usage"></a>
-
-### Compilation Pattern
-
-For .c files, use the following compilation command:
-
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 filename.c -o program_name
-./program_name
-```
-
-### Script Usage
-
-For script files (0-preprocessor, 1-compiler, etc.), make them executable first:
-
-```bash
-chmod +x 0-preprocessor
-./0-preprocessor main.c
-```
-
-### Understanding the Compilation Process
-
-1. **Preprocessing** (0-preprocessor): Expand macros and includes
-2. **Compilation** (2-assembler): Convert C code to assembly
-3. **Assembly** (1-compiler): Convert assembly to object code
-4. **Linking** (3-name): Link object files into executable
-
-## 🔑 Key Concepts <a name = "key_concepts"></a>
-
-- **Preprocessor Directives**: `#include`, `#define`, macro expansion
-- **Compilation Stages**: Preprocessing → Compilation → Assembly → Linking
-- **Standard Library Functions**: `puts()`, `printf()`, `write()`
-- **Data Types and Sizes**: Using `sizeof` to understand memory
-- **I/O Operations**: Output to stdout and stderr
-- **Assembly Language**: Low-level representation of code
-- **Compiler Flags**: `-Wall`, `-Werror`, `-Wextra`, `-pedantic`
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
-- [GCC](https://gcc.gnu.org/) - C Compiler
-- [Linux](https://www.linux.org/) - Operating System
-- [Bash](https://www.gnu.org/software/bash/) - Shell Scripting
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@hugou74130](https://github.com/hugou74130) - Complete work
-
-See also the list of [contributors](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Holberton School for the curriculum and educational resources
-- The open-source community for development tools
-- All mentors and peers who contributed to the success of this project
+- Holberton School pour le programme et l'inspiration.
+- La communauté C pour les innombrables ressources et documentations.

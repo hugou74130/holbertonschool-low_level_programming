@@ -10,14 +10,14 @@
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 
 </div>
 
 ---
 
 <p align="center"> Advanced exercises on functions, nested loops, and pattern printing in C.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Table of Contents
@@ -139,7 +139,7 @@ Draws a diagonal line using the '\' character and spaces. Shows coordinate-based
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 7-print_diagonal.c main.c -o print_diagonal
 ./print_diagonal
-# Output: 
+# Output:
 # \
 #  \
 #   \
