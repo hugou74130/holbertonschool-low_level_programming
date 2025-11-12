@@ -11,17 +11,17 @@
  * ou si l'allocation mémoire échoue
  */
 
-char *_strdup(char *str)
+char *_strdup(char *str) // str est la chaine à dupliquer
 {
-	char *dup;
-	unsigned int i, len;
+	char *dup; // dup sert a 
+	unsigned int i, len; // i sert a boucler, len est pour la longueur de la memoire
 
-	if (str == NULL)
-		return (NULL);
-	len = 0;
-	while (str[len])
-		len++;
-	dup = malloc((len + 1) * sizeof(char));
+	if (str == NULL) // verification  de str 
+		return (NULL);// sinon return NULL
+	len = 0; // initialiser len a 0
+	while (str[len])// faire une boucle et compter avec len 
+		len++; // avancer len dans le tableau 
+	dup = malloc((len + 1) * sizeof(char)); // 
 	if (dup == NULL)
 		return (NULL);
 	for (i = 0; i <= len; i++)
