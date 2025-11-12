@@ -1,5 +1,4 @@
 #include "dog.h"
-
 /**
  *
  *new_dog - Creates a new dog structure with allocated memory
@@ -7,7 +6,6 @@
  *@age: Float representing the dog's age
  *@owner: Pointer to a string containing the owner's name
  **/
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
@@ -16,6 +14,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
+
 	len = 0;
 	while (name[len])
 		++len;
