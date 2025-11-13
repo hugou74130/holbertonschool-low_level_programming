@@ -9,8 +9,13 @@
 
 int _islower(int c)
 {
-if (c >= 'a' && c <= 'z')
-return (1);
-else
-return (0);
+	// Vérifie si 'c' est dans la plage ASCII de 'a' à 'z'
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1); // Retourne 1 pour "VRAI" (c'est une minuscule)
+	}
+	else // Sinon...
+	{
+		return (0); // Retourne 0 pour "FAUX" (ce n'est pas une minuscule)
+	}
 }

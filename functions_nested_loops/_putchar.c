@@ -8,6 +8,8 @@
  */
 int _putchar(char c)
 {
-    return write(1, &c, 1);
+	// Appelle 'write' pour écrire 1 octet (le 3e arg)
+	// de la variable 'c' (dont on donne l'adresse, &c, le 2e arg)
+	// vers la sortie standard (stdout, le 1er arg)
+	return write(1, &c, 1);
 }
-

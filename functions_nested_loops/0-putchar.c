@@ -9,14 +9,14 @@
 
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
-return (0);
+	_putchar('_');	// imprime charactere par charactere
+	_putchar('p');	// imprime charactere par charactere
+	_putchar('u');	// imprime charactere par charactere
+	_putchar('t');	// imprime charactere par charactere
+	_putchar('c');	// imprime charactere par charactere
+	_putchar('h');	// imprime charactere par charactere
+	_putchar('a');	// imprime charactere par charactere
+	_putchar('r');	// imprime charactere par charactere
+	_putchar('\n'); // imprime charactere par charactere
+	return (0);		// indique que le programme a marcher avec succès
 }
