@@ -12,32 +12,43 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **grid;
-	int i;
-	int j;
+	int **grid; // Pointeur vers le "tableau de pointeurs" (qui représentera les lignes)
+	int i;		// Compteur pour les lignes (height)
+	int j;		// Compteur pour les colonnes (width)
 
+	// Vérifie si les dimensions demandées sont invalides
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
+	// Étape 1 : Alloue la mémoire pour le tableau de pointeurs (les lignes)
+	// On a besoin de 'height' pointeurs (un par ligne)
 	grid = malloc(height * sizeof(int *));
-	if (grid == NULL)
+	if (grid == NULL) // Vérifie l'échec de cette première allocation
 		return (NULL);
 
+	// Étape 2 : Boucle sur chaque ligne pour allouer la mémoire des colonnes
 	for (i = 0; i < height; i++)
 	{
+		// Alloue la mémoire pour la ligne 'i', qui est un tableau de 'width' entiers
 		grid[i] = malloc(width * sizeof(int));
-		if (grid[i] == NULL)
+
+		if (grid[i] == NULL) // Si l'allocation de *cette* ligne échoue...
 		{
-			/* Free all previously allocated rows */
+			// Étape 3 (Cleanup) : On doit libérer TOUT ce qu'on a déjà alloué
+
+			// Libère toutes les lignes précédentes (de 0 à i-1)
 			for (j = 0; j < i; j++)
 				free(grid[j]);
-			/* Free the grid pointer itself */
+
+			// Libère le "tableau de pointeurs" principal
 			free(grid);
-			return (NULL);
+			return (NULL); // Signale l'échec
 		}
 
+		// Étape 4 (Initialisation) : Met tous les éléments de la ligne 'i' à 0
 		for (j = 0; j < width; j++)
-			grid[i][j] = 0;
+			grid[i][j] = 0; // Initialise la cellule [i][j] à 0
 	}
-	return (grid);
+
+	return (grid); // Retourne le pointeur vers la grille 2D complète
 }

@@ -11,23 +11,29 @@
  * or if memory allocation fails
  */
 
-char *create_array(unsigned int size, char c) // size taille du tableau, c caractère utilisé pour initialiser mon tableau
+char *create_array(unsigned int size, char c) // size: taille du tableau, c: caractère d'initialisation
 {
-	char *arr; // pointeur vers le tableau 
-	unsigned int i; // compteur pour la boucle 
+	char *arr;		// Pointeur qui contiendra l'adresse du tableau alloué
+	unsigned int i; // Compteur pour la boucle (index)
 
-	if (size == 0) // verification que size est pas = 0
+	if (size == 0) // Vérifie si la taille demandée est nulle
 	{
-		return (NULL);
+		return (NULL); // Retourne NULL car on ne peut pas allouer un tableau de taille 0
 	}
-	arr = malloc(size * sizeof(char)); // allocation de la mémoire pour size
-	if (arr == NULL) // vérification apres la fin de lallocation mémoire
+
+	// Alloue 'size' octets (sizeof(char)
+	arr = malloc(size * sizeof(char));
+
+	if (arr == NULL) // Vérifie si l'allocation mémoire (malloc) a échoué
 	{
-		return (NULL);
+		return (NULL); // Retourne NULL pour signaler l'échec
 	}
-	for (i = 0; i < size; i++)//boucle pour permettre de parcourir size
+
+	// Boucle pour parcourir chaque case du tableau, de 0 à (size - 1)
+	for (i = 0; i < size; i++)
 	{
-		arr[i] = c;//c permet de mettre tout les caractère initialiser dans arr 
+		arr[i] = c; // Affecte le caractère 'c' à l'élément courant du tableau
 	}
-	return (arr);
+
+	return (arr); // Retourne le pointeur vers le tableau alloué et initialisé
 }
