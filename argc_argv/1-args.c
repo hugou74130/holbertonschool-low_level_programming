@@ -14,7 +14,12 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argv;
+	(void)argv; // Informe le compilateur que 'argv' est volontairement inutilisé
+
+	// Affiche le nombre d'arguments passés par l'utilisateur.
+	// 'argc' est le total, 'argv[0]' est le nom du programme,
+	// donc 'argc - 1' est le nombre d'arguments après le nom.
 	printf("%d\n", argc - 1);
-	return (0);
+
+	return (0); // Indique au système que le programme s'est terminé sans erreur
 }
