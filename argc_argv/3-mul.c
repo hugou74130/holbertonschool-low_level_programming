@@ -16,18 +16,24 @@
 
 int main(int argc, char *argv[])
 {
-	int sum1;	// cree un entier sum 1
-	int sum2;	// cree un entier sum 2
-	int result; // cree un entier resultat qui nous serviras pour sum 1 et sum 2
+	int sum1;	// Variable pour stocker le premier nombre
+	int sum2;	// Variable pour stocker le second nombre
+	int result; // Variable pour stocker le résultat
 
-	if (argc != 3) // si argc nest pas egal a 3
+	if (argc != 3)
 	{
-		printf("Error\n"); // on imprime une erreur
+		printf("Error\n"); // Affiche un message d'erreur si le nombre d'arguments est faux
 		return (1);		   // signale que le programme a eu une erreur
 	}
-	sum1 = atoi(argv[1]);	// convertie argv en entier
-	sum2 = atoi(argv[2]);	// converti argv en entier
-	result = sum1 * sum2;	// met le resultat de sum*sum2 dans result
-	printf("%d\n", result); // imprime le resultat
-	return (0);				// indique que le code est retourner sans aucun erreur
+
+	// Convertit le 1er argument (argv[1]) de chaîne (ASCII) en entier
+	sum1 = atoi(argv[1]);
+	// Convertit le 2e argument (argv[2]) de chaîne (ASCII) en entier
+	sum2 = atoi(argv[2]);
+
+	result = sum1 * sum2; // Calcule la multiplication
+
+	printf("%d\n", result); // Imprime le résultat
+
+	return (0); // indique que le code est retourné sans aucune erreur
 }
