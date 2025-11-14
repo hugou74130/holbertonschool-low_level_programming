@@ -9,20 +9,28 @@
 
 int print_sign(int n)
 {
-if (n > 0)
-{
-_putchar('+');
-return (1);
+	// Vérifie si le nombre 'n' est strictement positif.
+	if (n > 0)
+	{
+		// Si oui, affiche le caractère '+'.
+		_putchar('+');
+		// Retourne la valeur 1 pour "positif".
+		return (1);
+	}
+	// Si 'n' n'est pas positif, vérifie s'il est égal à zéro.
+	else if (n == 0)
+	{
+		// Si oui, affiche le caractère '0'.
+		_putchar('0');
+		// Retourne la valeur 0 pour "zéro".
+		return (0);
+	}
+	// 'else' : s'exécute si 'n' n'est ni positif, ni zéro (il est donc négatif).
+	else
+	{
+		// Affiche le caractère '-'.
+		_putchar('-');
+		// Retourne la valeur -1 pour "négatif".
+		return (-1);
+	}
 }
-else if (n == 0)
-{
-_putchar('0');
-return (0);
-}
-else
-{
-_putchar('-');
-return (-1);
-}
-}
-
