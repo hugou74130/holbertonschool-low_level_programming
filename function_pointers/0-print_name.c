@@ -16,9 +16,9 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (f == NULL || name == NULL)
+	if (f == NULL || name == NULL) // Vérification que f et name ne sont pas nuls
 
-		return;
+		return; // si l'un d'eux est nul, on retourne
 
-	f(name);
+	f(name); // Si c'est bon, on appelle la fonction pointée par f
 }

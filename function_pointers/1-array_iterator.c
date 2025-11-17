@@ -18,10 +18,10 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 
 {
-	size_t i;
+	size_t i; // Déclaration d'une variable de type size_t
 
-	if (array == NULL || action == NULL)
-		return;
-	for (i = 0; i < size; i++)
-		action(array[i]);
+	if (array == NULL || action == NULL) // Vérification que array et action ne sont pas nuls
+		return;							 // si l'un des deux et nul, on retourne
+	for (i = 0; i < size; i++)			 // Boucle : i commence à 0 et s'incrémente tant que i < size
+		action(array[i]);				 // On appelle la fonction action avec array[i] comme argument
 }

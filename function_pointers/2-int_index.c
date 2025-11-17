@@ -17,16 +17,14 @@
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
-
 {
-	int i;
-
-	if (array == NULL || cmp == NULL)
-		return (-1);
-	for (i = 0; i < size; i++)
+	int i;							  // Déclaration d'une variable de type int
+	if (array == NULL || cmp == NULL) // Vérification que array et cmp ne sont pas nuls
+		return (-1);				  // Retourner -1 si l'un d'eux est nul
+	for (i = 0; i < size; i++)		  // Boucle : i commence à 0 et s'incrémente tant que i < size
 	{
-		if (cmp(array[i]) != 0)
-			return (i);
+		if (cmp(array[i]) != 0) // Si la fonction cmp retourne une valeur différente de 0
+			return (i);			// Retourner l'index trouvé
 	}
-	return (-1);
+	return (-1); // Retourner -1 si aucun élément ne correspond
 }

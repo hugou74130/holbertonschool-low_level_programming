@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762798000-gemini-generated-image-rdonawrdonawrdon.jpg" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/function_pointers" rel="noopener">
+<img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/47/1/1763395989-gemini-generated-image-1031hk1031hk1031.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Holberton School - Low Level Programming</h3>
+<h3 align="center">Holberton School - Function Pointers</h3>
 
 <div align="center">
 
@@ -15,18 +15,18 @@
 
 ---
 
-<p align="center">  
-This repository contains all C programming projects completed as part of the **Low Level Programming** curriculum at **Holberton School**.  
-It covers the fundamentals of system programming: memory, pointers, structures, compilation, and basic algorithms.  
+<p align="center">
+This directory contains C programming exercises focused on <b>Function Pointers</b> as part of the <b>Low Level Programming</b> curriculum at <b>Holberton School</b>.
+It covers advanced pointer concepts: storing function addresses, passing functions as parameters, and arrays of function pointers.
 </p>
 
 ---
 
 ## 📝 Table of Contents
-
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Project Structure](#project_structure)
+- [Compilation](#compilation)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
@@ -36,16 +36,18 @@ It covers the fundamentals of system programming: memory, pointers, structures, 
 
 ## 🧐 About <a name = "about"></a>
 
-The **Low Level Programming** track focuses on learning the foundations of the **C language** and the underlying logic of how computers work.  
-Topics covered include:  
-- Memory management (`malloc`, `free`)  
-- Pointers and arrays  
-- Structures and linked lists  
-- File I/O and system calls  
-- Sorting algorithms and data manipulation  
-- Compilation and linking concepts  
+The **Function Pointers** module focuses on one of the most powerful concepts in C: **pointers to functions**.
 
-Each directory in this repository corresponds to an individual project or module.
+Key topics covered include:
+
+- Function pointer syntax and declaration
+- Passing functions as parameters to other functions
+- Returning pointers to functions
+- Arrays of function pointers
+- Callbacks and higher-order functions
+- Practical applications (sorting, filtering, mapping)
+
+This knowledge is essential for understanding callbacks, event handlers, and advanced data structure implementations.
 
 ---
 
@@ -53,15 +55,16 @@ Each directory in this repository corresponds to an individual project or module
 
 ### Prerequisites
 
-You need an environment capable of compiling C code.  
-On Ubuntu (or any Linux system), simply install:
+You need a C compiler and build tools installed on your system.
+
+On Ubuntu (or any Linux distribution):
 
 ```bash
 sudo apt update
 sudo apt install build-essential
 ```
 
-This installs `gcc`, `make`, and the required libraries.
+This installs `gcc`, `make`, and required development libraries.
 
 ### Installing
 
@@ -69,17 +72,43 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
-cd holbertonschool-low_level_programming
+cd holbertonschool-low_level_programming/function_pointers
 ```
 
-Each folder contains one or more `.c` files along with a test file `main.c`.  
-To compile a program, run for example:
+Each file in this directory contains one or more functions demonstrating function pointer concepts.
+
+---
+
+## 📁 Project Structure <a name = "project_structure"></a>
+
+```
+function_pointers/
+├── 0-print_name.c          # Basic function pointer declaration and usage
+├── 1-array_iterator.c      # Function pointers as callback parameters
+├── 2-int_index.c           # Searching arrays using function pointers
+├── 3-calc.c                # Calculator using array of function pointers
+├── 3-op_functions.c        # Calculator operation functions
+├── 3-get_op_func.c         # Function pointer selection logic
+└── function_pointers.h     # Header file with function prototypes
+```
+
+---
+
+## 🔨 Compilation <a name = "compilation"></a>
+
+To compile a single exercise:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic file.c main.c -o program
+gcc -Wall -Werror -Wextra -pedantic exercise.c -o exercise
 ```
 
-Then execute it:
+To compile with a header file:
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -I. main.c exercise.c -o program
+```
+
+Then execute:
 
 ```bash
 ./program
@@ -87,54 +116,58 @@ Then execute it:
 
 ---
 
-## 🔧 Tests <a name = "tests"></a>
-
-Tests are performed using the `main.c` files provided with each project.  
-To run tests:
-
-```bash
-gcc -Wall -Werror -Wextra -pedantic my_file.c main.c -o test
-./test
-```
-
-You can also write your own test files to verify function behavior.
-
----
-
 ## 🎈 Usage <a name="usage"></a>
 
+### Example: Basic Function Pointer
+
+```c
+#include <stdio.h>
+
+void say_hello(char *name)
+{
+    printf("Hello, %s!\n", name);
+}
+
+int main(void)
+{
+    void (*fp)(char *) = say_hello;  // Declare function pointer
+    fp("World");                      // Call through pointer
+    return (0);
+}
+```
+
+### Example: Array of Function Pointers
+
+```c
+int (*operations[])(int, int) = {add, subtract, multiply, divide};
+```
+
 This repository can be used as:
-- A reference for learning **C programming**.  
-- A support tool for practicing **algorithmic logic**.  
-- A base for other system-level projects (e.g., mini-shell, memory management, etc.).
 
----
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-No deployment required:  
-Programs are executed directly from the **command line** after compilation.
+- A learning resource for **function pointer concepts**
+- Practice material for **callback functions** and **higher-order functions**
+- Foundation for **sorting algorithms** (qsort, custom implementations)
+- Reference for **event-driven programming** patterns
 
 ---
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Core language  
-- [GCC](https://gcc.gnu.org/) – Compiler  
-- [Make](https://www.gnu.org/software/make/) – Build automation tool  
-- [Ubuntu](https://ubuntu.com/) – Recommended development environment  
+- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Core language
+- [GCC](https://gcc.gnu.org/) – Compiler
+- [Ubuntu](https://ubuntu.com/) – Development environment
 
 ---
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@hugou74130](https://github.com/hugou74130) – Development, exercises, and testing  
+- [@hugou74130](https://github.com/hugou74130) – Development and exercises
 - Inspired by the **Holberton School** curriculum
 
 ---
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Holberton School for the projects and educational resources  
-- Fellow students and community members for their feedback and support  
-- Official documentation of C and GCC  
+- Holberton School for the projects and educational resources
+- Fellow students and community members for their feedback
+- Official C documentation and GCC resources
