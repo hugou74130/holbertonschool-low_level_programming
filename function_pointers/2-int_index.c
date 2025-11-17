@@ -12,7 +12,8 @@
  * comparison function to each element. Returns the index of the first
  * element for which cmp does not return 0.
  *
- * Return: Index of the first matching element, or -1 if no match or invalid input
+ * Return: Index of the first matching element,
+ * or -1 if no match or invalid input
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
