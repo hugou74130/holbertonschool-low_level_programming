@@ -1,5 +1,12 @@
 #include "3-calc.h"
 
+/**
+ * main - Entry point, performs calculations
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: Always 0 on success
+ */
+
 int main(int argc, char *argv[])
 
 {

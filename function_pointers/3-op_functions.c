@@ -1,5 +1,12 @@
 #include "3-calc.h"
 
+/**
+ * op_add - Adds two integers
+ * @a: First integer
+ * @b: Second integer
+ * Return: Sum of a and b
+ */
+
 int op_add(int a, int b)
 {
 	return (a + b);
