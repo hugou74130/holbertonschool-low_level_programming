@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/more_malloc_free" rel="noopener">
- <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/46/3/1762948631-gemini-generated-image-xz7ysqxz7ysqxz7y.jpg" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming/tree/main/function_pointers" rel="noopener">
+<img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/47/1/1763395989-gemini-generated-image-1031hk1031hk1031.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Gestion Avancée de la Mémoire (more_malloc_free)</h3>
+<h3 align="center">Holberton School - Function Pointers</h3>
 
 <div align="center">
 
@@ -11,92 +11,163 @@
 [![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 
-Ce projet explore des techniques avancées de gestion de la mémoire dynamique en C, en se concentrant sur `malloc`, `free`, et `realloc`.
+</div>
 
-## 📝 Table des matières
+---
 
-- [À propos](#à-propos)
-- [Démarrage](#démarrage)
-- [Utilisation](#utilisation)
-- [Technologies utilisées](#technologies-utilisées)
-- [Auteurs](#auteurs)
-- [Remerciements](#remerciements)
+<p align="center">
+This directory contains C programming exercises focused on <b>Function Pointers</b> as part of the <b>Low Level Programming</b> curriculum at <b>Holberton School</b>.
+It covers advanced pointer concepts: storing function addresses, passing functions as parameters, and arrays of function pointers.
+</p>
 
-## 🧐 À propos
+---
 
-Ce projet, faisant partie du cursus Holberton School, approfondit les concepts de gestion de la mémoire dynamique en C. Il ne se contente pas de `malloc` et `free` de base, mais explore également la fonction `realloc` pour redimensionner la mémoire, les stratégies de gestion des échecs d'allocation, et l'allocation d'espaces mémoires plus complexes comme les tableaux de pointeurs (souvent utilisés pour simuler des tableaux à deux dimensions).
+## 📝 Table of Contents
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Project Structure](#project_structure)
+- [Compilation](#compilation)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-L'objectif est de maîtriser l'allocation, la libération et la réallocation de la mémoire de manière sûre et efficace, en évitant les fuites de mémoire et les erreurs de segmentation.
+---
 
-## 🏁 Démarrage
+## 🧐 About <a name = "about"></a>
 
-Ces instructions vous permettront d'obtenir une copie du projet et de le faire fonctionner sur votre machine locale à des fins de développement et de test.
+The **Function Pointers** module focuses on one of the most powerful concepts in C: **pointers to functions**.
 
-### Prérequis
+Key topics covered include:
 
-Pour compiler et exécuter les fichiers C de ce projet, vous aurez besoin d'un compilateur C comme GCC.
+- Function pointer syntax and declaration
+- Passing functions as parameters to other functions
+- Returning pointers to functions
+- Arrays of function pointers
+- Callbacks and higher-order functions
+- Practical applications (sorting, filtering, mapping)
+
+This knowledge is essential for understanding callbacks, event handlers, and advanced data structure implementations.
+
+---
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+### Prerequisites
+
+You need a C compiler and build tools installed on your system.
+
+On Ubuntu (or any Linux distribution):
 
 ```bash
 sudo apt update
-sudo apt install gcc
+sudo apt install build-essential
 ```
 
-### Installation
+This installs `gcc`, `make`, and required development libraries.
 
-Clonez le dépôt sur votre machine locale :
+### Installing
+
+Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/function_pointers
 ```
 
-Naviguez vers le répertoire du projet :
+Each file in this directory contains one or more functions demonstrating function pointer concepts.
+
+---
+
+## 📁 Project Structure <a name = "project_structure"></a>
+
+```
+function_pointers/
+├── 0-print_name.c          # Basic function pointer declaration and usage
+├── 1-array_iterator.c      # Function pointers as callback parameters
+├── 2-int_index.c           # Searching arrays using function pointers
+├── 3-calc.c                # Calculator using array of function pointers
+├── 3-op_functions.c        # Calculator operation functions
+├── 3-get_op_func.c         # Function pointer selection logic
+└── function_pointers.h     # Header file with function prototypes
+```
+
+---
+
+## 🔨 Compilation <a name = "compilation"></a>
+
+To compile a single exercise:
 
 ```bash
-cd holbertonschool-low_level_programming/more_malloc_free
+gcc -Wall -Werror -Wextra -pedantic exercise.c -o exercise
 ```
 
-Vous pouvez ensuite compiler n'importe quel fichier C dans ce répertoire. Par exemple, pour compiler `0-malloc_checked.c` (en le liant à un fichier `main.c` s'il est fourni) :
+To compile with a header file:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-malloc_checked.c main_0.c -o 0-malloc_checked
+gcc -Wall -Werror -Wextra -pedantic -I. main.c exercise.c -o program
 ```
 
-Et pour l'exécuter :
+Then execute:
 
 ```bash
-./0-malloc_checked
+./program
 ```
 
-## 🎈 Utilisation
+---
 
-Ce répertoire contient une série de fichiers, chacun résolvant un problème spécifique lié à la gestion de la mémoire :
+## 🎈 Usage <a name="usage"></a>
 
-- **0-malloc_checked.c** : Implémente une fonction qui alloue de la mémoire en utilisant malloc et gère les échecs d'allocation en terminant le programme.
+### Example: Basic Function Pointer
 
-- **1-string_nconcat.c** : Concatène deux chaînes de caractères en utilisant malloc.
+```c
+#include <stdio.h>
 
-- **2-calloc.c** : Implémente une fonction simulant calloc (allocation avec initialisation à zéro) en utilisant malloc.
+void say_hello(char *name)
+{
+    printf("Hello, %s!\n", name);
+}
 
-- **3-array_range.c** : Crée un tableau d'entiers contenant une plage de valeurs.
+int main(void)
+{
+    void (*fp)(char *) = say_hello;  // Declare function pointer
+    fp("World");                      // Call through pointer
+    return (0);
+}
+```
 
-- **100-realloc.c** : Implémente une fonction simulant realloc.
+### Example: Array of Function Pointers
 
-- **101-mul.c** : Un programme qui multiplie deux grands nombres positifs, nécessitant une gestion dynamique de la mémoire pour les résultats.
+```c
+int (*operations[])(int, int) = {add, subtract, multiply, divide};
+```
 
-Chaque fichier peut être compilé et testé individuellement pour comprendre le concept qu'il illustre.
+This repository can be used as:
 
-## ⛏️ Technologies utilisées
+- A learning resource for **function pointer concepts**
+- Practice material for **callback functions** and **higher-order functions**
+- Foundation for **sorting algorithms** (qsort, custom implementations)
+- Reference for **event-driven programming** patterns
 
-- **Langage C** - Langage de programmation
-- **GCC** - Compilateur C
+---
 
-## ✍️ Auteurs
+## ⛏️ Built Using <a name = "built_using"></a>
 
-- **@hugou74130** - Travail initial et développement
+- [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Core language
+- [GCC](https://gcc.gnu.org/) – Compiler
+- [Ubuntu](https://ubuntu.com/) – Development environment
 
-Voir aussi la liste des contributeurs qui ont participé à ce projet.
+---
 
-## 🎉 Remerciements
+## ✍️ Authors <a name = "authors"></a>
 
-- Holberton School pour le programme et l'inspiration.
-- La communauté C pour les innombrables ressources et documentations.
+- [@hugou74130](https://github.com/hugou74130) – Development and exercises
+- Inspired by the **Holberton School** curriculum
+
+---
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Holberton School for the projects and educational resources
+- Fellow students and community members for their feedback
+- Official C documentation and GCC resources
