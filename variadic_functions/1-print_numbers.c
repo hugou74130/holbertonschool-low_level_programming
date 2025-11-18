@@ -10,7 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int num;
 
-	if (n == 0)
+	if (n == 0 || separator == 0)
 
 		return;
 
