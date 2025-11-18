@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * print_strings - Prints strings followed by a new line
+ * @separator: The string to be printed between the strings
+ * @n: The number of strings passed to the function
+ *
+ * Description: Prints n strings followed by a new line.
+ * If separator is NULL, it is not printed.
+ * If a string is NULL, it prints "(nil)" instead.
+ */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 
 {
