@@ -19,7 +19,7 @@ void print_all(const char *const format, ...)
 		switch (c)
 		{
 		case 'c':
-			printf("%c ", va_arg(args, int));
+			printf("%c, ", va_arg(args, int));
 			break;
 
 		case 'i':
@@ -41,5 +41,5 @@ void print_all(const char *const format, ...)
 		i++;
 	}
 	va_end(args);
-	printf("\n");
+	printf("\b \n");
 }
