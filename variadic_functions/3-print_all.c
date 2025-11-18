@@ -39,7 +39,11 @@ void print_all(const char *const format, ...)
 			break;
 		}
 		i++;
+		while (format[i] && format[i] != 'c' && format[i] != 'i' && format[i] != 'f' && format[i] != 's')
+			i++;
+		if (format[i])
+			printf(", ");
 	}
 	va_end(args);
-	printf("\b \n");
+	printf("\n");
 }
