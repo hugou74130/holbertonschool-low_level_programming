@@ -38,5 +38,5 @@ void print_all(const char *const format, ...)
 			printf(", ");
 	}
 	va_end(args);
-	printf("\n");
+	printf("\b\n");
 }
