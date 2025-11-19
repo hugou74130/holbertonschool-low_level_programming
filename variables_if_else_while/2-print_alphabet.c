@@ -8,12 +8,11 @@
 
 int main(void)
 {
-char c;
-
-for (c = 'a'; c <= 'z' ; c++)
-{
-putchar(c);
-}
-putchar('\n');
-return (0);
+	char c;						 // Déclare une variable char c
+	for (c = 'a'; c <= 'z'; c++) // Boucle qui parcourt les lettres de 'a' à 'z'
+	{
+		putchar(c); // Affiche le caractère c
+	}
+	putchar('\n'); // Affiche un saut de ligne
+	return (0);
 }
