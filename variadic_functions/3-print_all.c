@@ -18,19 +18,19 @@ void print_all(const char *const format, ...)
 		switch (c)
 		{
 		case 'c':
-			printf("%c, ", va_arg(args, int));
+			printf("%c", va_arg(args, int));
 			break;
 		case 'i':
-			printf("%d, ", va_arg(args, int));
+			printf("%d", va_arg(args, int));
 			break;
 		case 'f':
-			printf("%f, ", va_arg(args, double));
+			printf("%f", va_arg(args, double));
 			break;
 		case 's':
 			s = va_arg(args, char *);
 			if (s == NULL)
 				s = "(nil)";
-			printf("%s,", s);
+			printf("%s", s);
 			break;
 		}
 		i++;
