@@ -34,7 +34,8 @@ void print_all(const char *const format, ...)
 			break;
 		}
 		i++;
-		printf("\b\b");
+		if (format[i] && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+			printf("\b\b");
 	}
 	va_end(args);
 	printf("\n");
