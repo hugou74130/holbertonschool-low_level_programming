@@ -14,25 +14,27 @@
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
-
 {
-	va_list args;
-	unsigned int i;
-	char *str;
+	va_list args;	// Liste pour sauvegarder les arguments
+	unsigned int i; // Compteur pour la boucle
+	char *str;		// Pointeur sur chaque string
 
-	va_start(args, n);
-	for (i = 0; i < n; i++)
+	va_start(args, n); // Initialise la boîte à partir de n
+
+	for (i = 0; i < n; i++) // Parcourt n arguments
 	{
-		str = va_arg(args, char *);
+		str = va_arg(args, char *); // Récupère chaque argument (string)
 
-		if (str == NULL)
+		if (str == NULL) // Si la string est NULL
 			printf("(nil)");
-		else
+		else // Sinon affiche la string
 			printf("%s", str);
-		if (i < n - 1 && separator != NULL)
 
+		// Affiche le séparateur entre les strings (sauf après la dernière)
+		if (i < n - 1 && separator != NULL)
 			printf("%s", separator);
 	}
-	va_end(args);
-	printf("\n");
+
+	va_end(args); // Libère la liste
+	printf("\n"); // Saut de ligne à la fin
 }
