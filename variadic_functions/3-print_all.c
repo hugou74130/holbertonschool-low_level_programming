@@ -30,10 +30,12 @@ void print_all(const char *const format, ...)
 			s = va_arg(args, char *);
 			if (s == NULL)
 				s = "(nil)";
-			printf("%s", s);
+			printf("%s, ", s);
 			break;
 		}
 		i++;
+		if (format[i] && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+			printf("\b");
 	}
 	va_end(args);
 	printf("\n");
