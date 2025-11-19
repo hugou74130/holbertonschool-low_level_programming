@@ -34,7 +34,7 @@ void print_all(const char *const format, ...)
 			break;
 		}
 		i++;
-		if (format[i] && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+		if (i > 0 && (format[i - 1] == 'c' || format[i - 1] == 'i' || format[i - 1] == 'f' || format[i - 1] == 's'))
 			printf(", ");
 	}
 	va_end(args);
