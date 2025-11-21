@@ -15,11 +15,12 @@
  */
 
 char *_memset(char *s, char b, unsigned int n)
-
 {
-	unsigned int i;
+	unsigned int i; // Déclare une variable i
 
+	// Boucle : part de i = 0 et continue tant que i < n
 	for (i = 0; i < n; i++)
-		s[i] = b;
-	return (s);
+		s[i] = b; // Remplace chaque caractère de s par b pour les n premiers octets
+
+	return (s); // Retourne le pointeur s
 }
