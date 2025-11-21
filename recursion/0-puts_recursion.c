@@ -15,11 +15,12 @@
 
 void _puts_recursion(char *s)
 {
-	if (*s == '\0')
+	if (*s == '\0') // vérifie si le caractère pointé par s est le caractère de fin de chaîne '\0'
 	{
-		_putchar('\n');
-		return;
+		_putchar('\n'); // affiche un saut de ligne
+		return;			// termine la fonction
 	}
-	_putchar(*s);
-	_puts_recursion(s + 1);
+
+	_putchar(*s);			// affiche le caractère pointé par s
+	_puts_recursion(s + 1); // appelle la fonction récursivement pour le caractère suivant
 }

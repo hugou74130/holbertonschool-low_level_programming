@@ -18,10 +18,11 @@
 
 void _print_rev_recursion(char *s)
 {
-	if (*s == '\0')
+	if (*s == '\0') // vérifie si le caractère pointé par s est le caractère de fin de chaîne '\0'
 	{
-		return;
+		return; // termine la fonction si c'est la fin de la chaîne
 	}
-	_print_rev_recursion(s + 1);
-	_putchar(*s);
+
+	_print_rev_recursion(s + 1); // appelle la fonction récursivement pour le caractère suivant
+	_putchar(*s);				 // affiche le caractère pointé par s (après l'appel récursif pour inverser l'ordre)
 }
