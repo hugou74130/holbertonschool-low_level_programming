@@ -8,12 +8,14 @@
 
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
-{
-if (c != 'q' && c != 'e')
-putchar(c);
-}
-putchar('\n');
-return (0);
+	char c; // déclare une variable c
+
+	for (c = 'a'; c <= 'z'; c++) // boucle pour générer l'alphabet en minuscules
+	{
+		if (c != 'q' && c != 'e') // condition pour exclure les lettres 'q' et 'e'
+			putchar(c);			  // affiche le caractère c
+	}
+
+	putchar('\n'); // affiche un saut de ligne
+	return (0);	   // indique au système que le programme s'est exécuté avec succès
 }
