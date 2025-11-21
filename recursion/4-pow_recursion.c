@@ -14,12 +14,11 @@
 
 int _pow_recursion(int x, int y)
 {
-	if (y < 0)
+	if (y < 0)		 // vérifie si y est inférieur à 0 (les puissances négatives ne sont pas gérées ici)
+		return (-1); // dans ce cas, on retourne -1 pour indiquer une erreur
 
-		return (-1);
-	if (y == 0)
+	if (y == 0)		// si y est égal à 0
+		return (1); // x^0 vaut toujours 1
 
-		return (1);
-
-	return (x * _pow_recursion(x, y - 1));
+	return (x * _pow_recursion(x, y - 1)); // multiplie x par le résultat de la puissance de y - 1 (récursion)
 }

@@ -14,8 +14,8 @@
 
 int _strlen_recursion(char *s)
 {
-	if (*s == '\0') // verifie si le
-		return (0);
+	if (*s == '\0') // vérifie si le caractère pointé par s est le caractère de fin de chaîne
+		return (0); // si c’est la fin de la chaîne, on retourne 0
 
-	return (1 + _strlen_recursion(s + 1));
+	return (1 + _strlen_recursion(s + 1)); // on avance d'un caractère et on additionne 1 à chaque appel récursif
 }
