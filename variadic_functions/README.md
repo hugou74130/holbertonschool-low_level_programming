@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/46/1/1762798000-gemini-generated-image-rdonawrdonawrdon.jpg" alt="Project logo"></a>
+  <a href="https://github.com/hugou74130/holbertonschool-low_level_programming" rel="noopener">
+<img width=300px height=300px src="https://image.noelshack.com/fichiers/2025/47/5/1763714792-gemini-generated-image-cqark1cqark1cqar.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Holberton School - Low Level Programming</h3>
+<h3 align="center">Holberton School - Variadic Functions</h3>
 
 <div align="center">
 
@@ -16,8 +16,8 @@
 ---
 
 <p align="center">
-This repository contains all C programming projects completed as part of the **Low Level Programming** curriculum at **Holberton School**.
-It covers the fundamentals of system programming: memory, pointers, structures, compilation, and basic algorithms.
+This directory contains C programming exercises focused on **variadic functions**, a fundamental concept in systems programming at **Holberton School**.
+Learn how to work with functions that accept a variable number of arguments using the stdarg.h library.
 </p>
 
 ---
@@ -26,26 +26,28 @@ It covers the fundamentals of system programming: memory, pointers, structures, 
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Installing](#installing)
+- [Tests](#tests)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Acknowledgements](#acknowledgement)
 
 ---
 
 ## 🧐 About <a name = "about"></a>
 
-The **Low Level Programming** track focuses on learning the foundations of the **C language** and the underlying logic of how computers work.
-Topics covered include:
-- Memory management (`malloc`, `free`)
-- Pointers and arrays
-- Structures and linked lists
-- File I/O and system calls
-- Sorting algorithms and data manipulation
-- Compilation and linking concepts
+The **Variadic Functions** module focuses on understanding how to create functions that accept a variable number of arguments. This is a critical skill for systems programming and is used extensively in standard library functions like `printf()`.
 
-Each directory in this repository corresponds to an individual project or module.
+Key concepts covered:
+
+- Understanding the `...` (ellipsis) syntax in function prototypes
+- Working with the `stdarg.h` library (`va_start`, `va_arg`, `va_end` macros)
+- Handling unknown argument types and counts
+- Building flexible and reusable functions
+- Practical applications like custom print functions
+
+This module teaches you to write robust functions that can handle dynamic argument lists, a fundamental pattern in professional C programming.
 
 ---
 
@@ -63,20 +65,21 @@ sudo apt install build-essential
 
 This installs `gcc`, `make`, and the required libraries.
 
-### Installing
+### Installing <a name = "installing"></a>
 
 Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
-cd holbertonschool-low_level_programming
+cd holbertonschool-low_level_programming/variadic_functions
 ```
 
-Each folder contains one or more `.c` files along with a test file `main.c`.
+Each file contains one or more C functions along with a test file `main.c`.
+
 To compile a program, run for example:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic file.c main.c -o program
+gcc -Wall -Werror -Wextra -pedantic variadic_functions.c main.c -o program
 ```
 
 Then execute it:
@@ -93,27 +96,54 @@ Tests are performed using the `main.c` files provided with each project.
 To run tests:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic my_file.c main.c -o test
+gcc -Wall -Werror -Wextra -pedantic my_function.c main.c -o test
 ./test
 ```
 
-You can also write your own test files to verify function behavior.
+You can also write your own test files to verify function behavior with different argument counts and types.
 
 ---
 
 ## 🎈 Usage <a name="usage"></a>
 
-This repository can be used as:
-- A reference for learning **C programming**.
-- A support tool for practicing **algorithmic logic**.
-- A base for other system-level projects (e.g., mini-shell, memory management, etc.).
+This directory can be used as:
+
+- A reference for learning **variadic functions in C**
+- A foundation for understanding `printf()` and similar library functions
+- A learning tool for **advanced function design patterns**
+- A base for building custom formatting and printing utilities
+
+Example usage pattern:
+
+```c
+#include <stdarg.h>
+
+// Define a variadic function
+int sum_all(int count, ...)
+{
+    va_list args;
+    int sum = 0;
+    int i;
+
+    va_start(args, count);
+    for (i = 0; i < count; i++)
+        sum += va_arg(args, int);
+    va_end(args);
+
+    return (sum);
+}
+
+// Use it with any number of arguments
+int result = sum_all(3, 10, 20, 30);  // Returns 60
+```
 
 ---
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-No deployment required:
-Programs are executed directly from the **command line** after compilation.
+No deployment required. Programs are executed directly from the command line after compilation.
+
+These are educational examples and can be integrated into larger C projects or used as reference implementations.
 
 ---
 
@@ -121,6 +151,7 @@ Programs are executed directly from the **command line** after compilation.
 
 - [C Language](https://en.wikipedia.org/wiki/C_(programming_language)) – Core language
 - [GCC](https://gcc.gnu.org/) – Compiler
+- [stdarg.h](https://man7.org/linux/man-pages/man3/stdarg.3.html) – Variable arguments library
 - [Make](https://www.gnu.org/software/make/) – Build automation tool
 - [Ubuntu](https://ubuntu.com/) – Recommended development environment
 
@@ -137,4 +168,5 @@ Programs are executed directly from the **command line** after compilation.
 
 - Holberton School for the projects and educational resources
 - Fellow students and community members for their feedback and support
-- Official documentation of C and GCC
+- Official C documentation and GCC resources
+- The C standard library reference for variadic functions
