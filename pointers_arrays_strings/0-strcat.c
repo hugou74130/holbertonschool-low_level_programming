@@ -14,21 +14,22 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int j = 0;
+	int i = 0; // index pour parcourir dest
+	int j = 0; // index pour parcourir src
 
+	// Parcourt dest jusqu'à la fin de la chaîne
 	while (dest[i] != '\0')
-	{
 		i++;
-	}
+
+	// Copie les caractères de src à la fin de dest
 	while (src[j] != '\0')
 	{
-		dest[i] = src[j];
-
-		i++;
-		j++;
+		dest[i] = src[j]; // copie le caractère de src dans dest
+		i++;			  // passe à la position suivante dans dest
+		j++;			  // passe à la position suivante dans src
 	}
-	dest[i] = '\0';
 
-	return (dest);
+	dest[i] = '\0'; // ajoute le caractère de fin de chaîne à la fin de dest
+
+	return (dest); // retourne le pointeur vers dest
 }
