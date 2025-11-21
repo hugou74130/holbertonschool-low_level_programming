@@ -10,20 +10,20 @@
 
 int main(void)
 {
-int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
-{
-printf("%d is positive\n", n);
-}
-else if (n ==  0)
-{
-printf("%d is zero\n", n);
-}
-else
-{
-printf("%d is negative\n", n);
-}
-return (0);
+	int n;				   // variable qui contiendra un nombre aléatoire
+	srand(time(0));		   // sert a générer des nombres aléatoires différents a chaque exécution
+	n = rand() - RAND_MAX; // génére un nombre aléatoire et le décale pour inclure un nombre négatif
+	if (n > 0)			   // verification que n est supérieur a 0
+	{
+		printf("%d is positive\n", n); // afficher la decimal de n
+	}
+	else if (n == 0) // si n est egal a 0
+	{
+		printf("%d is zero\n", n); // affiche la decimal de n
+	}
+	else // sinon
+	{
+		printf("%d is negative\n", n); // affiche la decimal de n
+	}
+	return (0); // retourne est indique au systeme que le programme ces executer sans erreur
 }
