@@ -12,10 +12,10 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d != NULL)
+	if (d != NULL) // vérifie que le pointeur d n'est pas NULL
 	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
+		d->name = name;	  // le champ name de la structure pointe vers la même chaîne que name
+		d->age = age;	  // le champ age de la structure reçoit la valeur age
+		d->owner = owner; // le champ owner de la structure pointe vers la même chaîne que owner
 	}
 }

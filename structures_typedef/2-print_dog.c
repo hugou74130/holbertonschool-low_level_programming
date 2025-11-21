@@ -15,10 +15,15 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-		return;
+	if (d == NULL) // vérifie que le pointeur d n'est pas NULL
+		return;	   // si d est NULL, on quitte la fonction pour éviter un crash
 
+	// affiche le nom, ou "(nil)" si le nom est NULL
 	printf("Name: %s\n", d->name == NULL ? "(nil)" : d->name);
+
+	// affiche l'âge (float) de la structure
 	printf("Age: %f\n", d->age);
+
+	// affiche le propriétaire, ou "(nil)" si owner est NULL
 	printf("Owner: %s\n", d->owner == NULL ? "(nil)" : d->owner);
 }

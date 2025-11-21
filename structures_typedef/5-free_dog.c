@@ -12,13 +12,11 @@
  */
 
 void free_dog(dog_t *d)
-
 {
-	if (d)
+	if (d) // vérifie que le pointeur d n'est pas NULL
 	{
-
-		free(d->name);
-		free(d->owner);
-		free(d);
+		free(d->name);	// libère la mémoire allouée pour le champ name
+		free(d->owner); // libère la mémoire allouée pour le champ owner
+		free(d);		// libère la mémoire allouée pour la structure d elle-même
 	}
 }
