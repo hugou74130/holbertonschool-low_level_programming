@@ -1,11 +1,16 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - Ajoute un nouveau nœud à la fin d'une liste doublement chaînée
- * @head: pointeur sur le pointeur du premier nœud
- * @n: valeur entière à ajouter
+ * add_dnodeint_end - Adds a new node at the end of a dlistint_t list
+ * @head: double pointer to the head of the list
+ * @n: integer value to store in the new node
  *
- * Return: adresse du nouveau nœud, ou NULL en cas d'erreur
+ * Description: Creates a new node with value n and adds it at the end
+ * of the doubly linked list. If the list is empty, the new node becomes
+ * the head. Updates the prev and next pointers correctly for a doubly
+ * linked list.
+ *
+ * Return: Address of the newly created node, or NULL if malloc failed
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
