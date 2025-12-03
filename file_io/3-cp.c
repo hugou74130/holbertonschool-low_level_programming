@@ -1,13 +1,22 @@
 #include "main.h"
 
 /**
- * main - copies the content of a file to another file
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - Copies the content of one file to another file.
+ * @argc: Number of arguments.
+ * @argv: Array of arguments.
  *
- * Return: 0 on success, or exit with appropriate error code
+ * Description:
+ * This program copies the content of a file (file_from)
+ * to another file (file_to). It handles errors such as:
+ * incorrect argument count, read failure, write failure,
+ * and file descriptor closure failure.
+ *
+ * Return: 0 on success, or exits with the appropriate code:
+ * 97 - incorrect usage
+ * 98 - read error
+ * 99 - write error
+ * 100 - close error
  */
-
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, c1, c2;
@@ -27,9 +36,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(argv[2],
-				 O_CREAT | O_WRONLY | O_TRUNC,
-				 0664);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
