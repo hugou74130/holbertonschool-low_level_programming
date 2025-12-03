@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to;
 	ssize_t bytes_read, bytes_written;
 	char buffer[BUFFER_SIZE];
+	mode_t old_umask;
 
 	/* Check if correct number of arguments */
 	if (argc != 3)
@@ -43,12 +44,18 @@ int main(int argc, char *argv[])
 		exit(EXIT_READ_ERROR);
 	}
 
+	/* Set umask to 0 temporarily to ensure permissions are 0664 */
+	old_umask = umask(0);
+
 	/* Open destination file for writing, create if doesn't exist, truncate if exists */
 	/* O_WRONLY: Write only */
 	/* O_CREAT: Create file if it doesn't exist */
 	/* O_TRUNC: Truncate file if it exists */
 	/* 0664: rw-rw-r-- permissions */
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+
+	/* Restore old umask */
+	umask(old_umask);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
