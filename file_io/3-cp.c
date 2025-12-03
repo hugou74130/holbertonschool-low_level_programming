@@ -7,6 +7,7 @@
  *
  * Return: 0 on success, or appropriate exit code on error
  */
+
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, close_from, close_to;
