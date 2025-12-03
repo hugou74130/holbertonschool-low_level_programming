@@ -8,43 +8,44 @@
  * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
+// Fonction qui ajoute un nouveau noeud à la fin d'une liste chaînée (list_t)
 {
 	list_t *new;
 	list_t *temp;
-	size_t len;
+	size_t len; // Variable pour la longueur de la chaîne
 
 	if (head == NULL || str == NULL)
-		return (NULL);
+		return (NULL); // Si la liste ou la chaîne est invalide, retourne NULL
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(list_t)); // Alloue un nouveau noeud
 	if (new == NULL)
-		return (NULL);
+		return (NULL); // Si l'allocation échoue, retourne NULL
 
-	new->str = strdup(str);
+	new->str = strdup(str); // Duplique la chaîne reçue
 	if (new->str == NULL)
 	{
-		free(new);
+		free(new); // Libère le noeud si la duplication échoue
 		return (NULL);
 	}
 
 	len = 0;
 	while (str[len])
-		len++;
+		len++; // Calcule la longueur de la chaîne
 
-	new->len = len;
-	new->next = NULL;
+	new->len = len; // Stocke la longueur dans le noeud
+	new->next = NULL; // C'est le dernier noeud, donc next = NULL
 
 	if (*head == NULL)
 	{
-		*head = new;
+		*head = new; // Si la liste est vide, le nouveau noeud devient le premier
 		return (new);
 	}
 
-	temp = *head;
+	temp = *head; // Débute au début de la liste
 	while (temp->next != NULL)
-		temp = temp->next;
+		temp = temp->next; // Va jusqu'au dernier élément
 
-	temp->next = new;
+	temp->next = new; // Relie le dernier élément au nouveau noeud
 
-	return (new);
+	return (new); // Retourne l'adresse du nouveau noeud
 }

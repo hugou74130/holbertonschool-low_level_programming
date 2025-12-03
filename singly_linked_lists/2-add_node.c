@@ -10,29 +10,29 @@
  */
 
 list_t *add_node(list_t **head, const char *str)
+// Fonction qui ajoute un nouveau noeud au début d'une liste chaînée (list_t)
 {
 	list_t *new;
-	size_t len;
+	size_t len; // Variable pour la longueur de la chaine reçue
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(list_t)); // Alloue dynamiquement un nouveau noeud
 	if (new == NULL)
-		return (NULL);
+		return (NULL); // Retourne NULL si l'allocation échoue
 
-	new->str = strdup(str);
+	new->str = strdup(str); // Duplique la chaîne reçue dans le nouveau noeud
 	if (new->str == NULL)
-
 	{
-		free(new);
+		free(new); // Libère le noeud si la duplication échoue
 		return (NULL);
 	}
 
 	len = 0;
 	while (str[len])
-		len++;
+		len++; // Calcule la longueur de la chaîne
 
-	new->len = len;
-	new->next = *head;
-	*head = new;
+	new->len = len; // Stocke la longueur dans le noeud
+	new->next = *head; // Le noeud suivant est l'ancien head
+	*head = new; // Met à jour le head pour pointer sur le nouveau noeud
 
-	return (new);
+	return (new); // Retourne l'adresse du nouveau noeud
 }
