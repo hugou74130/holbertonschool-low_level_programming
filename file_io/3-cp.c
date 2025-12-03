@@ -1,26 +1,11 @@
 #include "main.h"
 
 /**
- * main - Copies the content of file_from to file_to
+ * main - Copies one file to another
  * @argc: Number of arguments
- * @argv: Array of argument strings
+ * @argv: Argument values
  *
- * Description:
- * This program copies the content of one file to another file.
- * It reads 1024 bytes at a time from the source file and writes
- * to the destination file. The destination file is truncated if
- * it already exists, and created with permissions rw-rw-r-- if new.
- *
- * Usage: ./cp file_from file_to
- *
- * Exit codes:
- * - 97: Incorrect number of arguments
- * - 98: Cannot read from source file
- * - 99: Cannot write to destination file
- * - 100: Cannot close file descriptor
- * - 0: Success
- *
- * Return: 0 on success, appropriate error code on failure
+ * Return: 0 on success, error code on failure
  */
 
 int main(int argc, char *argv[])
