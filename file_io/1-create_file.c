@@ -9,35 +9,36 @@
  */
 
 int create_file(const char *filename, char *text_content)
+// Fonction qui crée un fichier et y écrit text_content (ou le tronque si déjà existant)
 {
 	int fd, w, len = 0;
 
 	if (filename == NULL)
-		return (-1);
+		return (-1); // Si le nom de fichier est NULL, retourne erreur
 
-	/* Calculate length of text_content if not NULL */
+	// Calcule la longueur de text_content si ce n'est pas NULL
 	if (text_content != NULL)
 	{
 		while (text_content[len])
 			len++;
 	}
 
-	/* Create file with rw------- (0600), truncate if exists */
+	// Création (ou troncature) du fichier, droit rw-------
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
-		return (-1);
+		return (-1); // Erreur d'ouverture/écriture
 
-	/* If text_content is not NULL, write it */
+	// Si le contenu n'est pas NULL, on écrit dans le fichier
 	if (text_content != NULL)
 	{
-		w = write(fd, text_content, len);
+		w = write(fd, text_content, len); // Écrit le texte calculé
 		if (w == -1)
 		{
 			close(fd);
-			return (-1);
+			return (-1); // Problème d'écriture
 		}
 	}
 
-	close(fd);
-	return (1);
+	close(fd); // Ferme le fichier
+	return (1); // Succès
 }
