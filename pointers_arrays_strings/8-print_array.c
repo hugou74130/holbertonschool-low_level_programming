@@ -11,17 +11,17 @@
  */
 
 void print_array(int *a, int n)
+// Fonction qui affiche n éléments d'un tableau d'entiers séparés par une virgule
 {
-
 	int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++) // Parcourt chaque élément à afficher
 	{
-		printf("%d", a[i]);
+		printf("%d", a[i]); // Affiche la valeur
 		if (i < n - 1)
 		{
-			printf(", ");
+			printf(", "); // Ajoute une virgule sauf après le dernier
 		}
 	}
-	printf("\n");
+	printf("\n"); // Saut de ligne final
 }

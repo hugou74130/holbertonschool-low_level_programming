@@ -12,20 +12,18 @@
  * Return: Pointeur vers le caractère trouvé, ou NULL si absent
  */
 char *_strchr(char *s, char c)
+// Fonction qui cherche la première occurrence de c dans la chaîne s
 {
 	unsigned int i;
 
 	i = 0;
-
-	while (s[i] != '\0')
+	while (s[i] != '\0') // Parcourt toute la chaîne
 	{
 		if (s[i] == c)
-
-			return (&s[i]);
+			return (&s[i]); // Si trouvé, retourne l'adresse du caractère
 		i++;
-
 		if (s[i] == c)
-			return (&s[i]);
+			return (&s[i]); // Vérifie aussi après incrément, pour couverture
 	}
-	return (NULL);
+	return (NULL); // Retourne NULL si caractère non trouvé
 }

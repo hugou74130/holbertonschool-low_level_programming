@@ -13,16 +13,17 @@
  */
 
 int _strcmp(char *s1, char *si2)
+// Fonction qui compare s1 et si2 caractère à caractère
 {
 	int i = 0;
 
-	while (s1[i] != '\0' && si2[i] != '\0')
+	while (s1[i] != '\0' && si2[i] != '\0') // Parcourt les deux chaînes
 	{
 		if (s1[i] != si2[i])
 		{
-			return (s1[i] - si2[i]);
+			return (s1[i] - si2[i]); // Retourne la différence à la première inégalité
 		}
 		i++;
 	}
-	return (s1[i] - si2[i]);
+	return (s1[i] - si2[i]); // Si fin de chaîne atteinte, compare les caractères restants (peut être '\0')
 }

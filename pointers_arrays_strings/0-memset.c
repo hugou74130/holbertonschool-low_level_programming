@@ -15,12 +15,11 @@
  */
 
 char *_memset(char *s, char b, unsigned int n)
+// Fonction qui remplit une zone mémoire s avec la valeur b sur n octets
 {
-	unsigned int i; // Déclare une variable i
-
+	unsigned int i; // Déclare une variable pour l'index
 	// Boucle : part de i = 0 et continue tant que i < n
 	for (i = 0; i < n; i++)
 		s[i] = b; // Remplace chaque caractère de s par b pour les n premiers octets
-
 	return (s); // Retourne le pointeur s
 }

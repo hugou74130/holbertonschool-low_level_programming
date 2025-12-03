@@ -6,6 +6,7 @@
  */
 
 void reset_to_98(int *n)
+// Fonction qui met à jour la valeur pointée par n à 98
 {
-	*n = 98; // modifie la valeur pointée par n et la remplace par 98
+	*n = 98; // Modifie la valeur de l'entier pointé par n à 98
 }

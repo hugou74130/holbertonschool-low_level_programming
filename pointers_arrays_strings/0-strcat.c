@@ -13,23 +13,19 @@
  */
 
 char *_strcat(char *dest, char *src)
+// Fonction qui concatène la chaîne src à la fin de la chaîne dest
 {
 	int i = 0; // index pour parcourir dest
 	int j = 0; // index pour parcourir src
 
-	// Parcourt dest jusqu'à la fin de la chaîne
-	while (dest[i] != '\0')
+	while (dest[i] != '\0') // Trouve la fin de la chaîne dest
 		i++;
-
-	// Copie les caractères de src à la fin de dest
-	while (src[j] != '\0')
+	while (src[j] != '\0') // Parcourt chaque caractère de src
 	{
-		dest[i] = src[j]; // copie le caractère de src dans dest
-		i++;			  // passe à la position suivante dans dest
-		j++;			  // passe à la position suivante dans src
+		dest[i] = src[j]; // Ajoute src[j] à la suite de dest
+		i++; // Avance dans dest
+		j++; // Avance dans src
 	}
-
-	dest[i] = '\0'; // ajoute le caractère de fin de chaîne à la fin de dest
-
-	return (dest); // retourne le pointeur vers dest
+	dest[i] = '\0'; // Ajoute le caractère nul à la fin
+	return (dest); // Retourne dest
 }

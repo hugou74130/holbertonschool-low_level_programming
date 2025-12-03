@@ -18,18 +18,18 @@ char *cap_string(char *s)
 	int i = 0;
 	int new_word = 1;
 
-	while (s[i] != '\0')
+	while (s[i] != '\0') // Parcourt chaque caractère de la chaîne
 	{
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
 			s[i] == ',' || s[i] == ';' || s[i] == '.' ||
 			s[i] == '!' || s[i] == '?' || s[i] == '"' ||
 			s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
-			new_word = 1;
+			new_word = 1; // Prochain caractère pourrait être une majuscule
 		}
 		else if (new_word == 1 && s[i] >= 'a' && s[i] <= 'z')
 		{
-			s[i] = s[i] - 32;
+			s[i] = s[i] - 32; // Transforme la première lettre en majuscule
 			new_word = 0;
 		}
 		else
@@ -38,6 +38,5 @@ char *cap_string(char *s)
 		}
 		i++;
 	}
-
-	return (s);
+	return (s); // Retourne la chaîne modifiée
 }

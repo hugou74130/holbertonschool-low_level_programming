@@ -14,16 +14,16 @@
  * Return: void (Aucun retour)
  */
 void reverse_array(int *a, int n)
+// Fonction qui inverse le contenu d'un tableau d'entiers
 {
 	int temp;
 	int i = 0;
 	{
-		for (i = 0; i < n / 2; i++)
-
+		for (i = 0; i < n / 2; i++) // Parcourt jusqu'à la moitié du tableau
 		{
-			temp = a[i];
-			a[i] = a[n - 1 - i];
-			a[n - 1 - i] = temp;
+			temp = a[i]; // Sauvegarde la valeur du début
+			a[i] = a[n - 1 - i]; // Met la valeur de la fin au début
+			a[n - 1 - i] = temp; // Met la sauvegarde à la fin
 		}
 	}
 }

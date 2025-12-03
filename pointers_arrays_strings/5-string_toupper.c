@@ -16,14 +16,13 @@ char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	while (s[i] != '\0') // Parcourt la chaîne caractère par caractère
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		if (s[i] >= 'a' && s[i] <= 'z') // Si c'est une minuscule
 		{
-			s[i] = s[i] - 32;
+			s[i] = s[i] - 32; // Transforme en majuscule (table ASCII)
 		}
 		i++;
 	}
-
-	return (s);
+	return (s); // Retourne la chaîne modifiée
 }

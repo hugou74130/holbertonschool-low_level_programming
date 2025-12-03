@@ -8,23 +8,24 @@
  * If the number of characters is odd, it prints the last
  */
 void puts_half(char *str)
+// Fonction qui affiche la seconde moitié d'une chaîne (en cas d'impair, saute le premier du deuxième groupe)
 {
 	int len = 0, i, start;
 
-	/* Find the length of the string */
+	/* Calcul de la longueur de la chaîne */
 	while (str[len] != '\0')
 		len++;
 
-	/* Determine the starting index for printing half */
+	/* Calcule l'indice à partir duquel commencer à afficher */
 	if (len % 2 == 0)
 		start = len / 2;
 	else
 		start = (len + 1) / 2;
 
-	/* Print the second half of the string */
+	/* Affiche le second segment de la chaîne */
 	for (i = start; i < len; i++)
 	{
-		_putchar(str[i]);
+		_putchar(str[i]); // Affiche le caractère à l'index courant
 	}
-	_putchar('\n');
+	_putchar('\n'); // Saut de ligne
 }

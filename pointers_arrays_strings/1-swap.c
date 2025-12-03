@@ -8,11 +8,10 @@
  */
 
 void swap_int(int *a, int *b)
-
+// Fonction qui échange les valeurs pointées par a et b
 {
 	int temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	temp = *a; // Sauvegarde la valeur de *a
+	*a = *b; // Met la valeur de *b dans *a
+	*b = temp; // Replace la sauvegarde dans *b
 }

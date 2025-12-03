@@ -16,9 +16,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i; // index pour parcourir les tableaux
 
-	// Copie les n premiers octets de src vers dest
-	for (i = 0; i < n; i++)
-		dest[i] = src[i]; // copie le caractère/octet de src[i] dans dest[i]
-
-	return (dest); // retourne le pointeur vers dest
+	for (i = 0; i < n; i++) // Boucle de copie des octets
+		dest[i] = src[i]; // Copie src[i] dans dest[i]
+	return (dest); // retourne dest
 }

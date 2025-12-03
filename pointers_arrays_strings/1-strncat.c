@@ -14,21 +14,21 @@
  */
 
 char *_strncat(char *dest, char *src, int n)
+// Fonction qui concatène au plus n caractères de src à la fin de dest
 {
 	int i = 0;
 	int j = 0;
 
 	while (dest[i] != '\0')
-
 	{
-		i++;
+		i++; // Cherche la fin de la chaîne dest
 	}
 	while (j < n && src[j] != '\0')
 	{
-		dest[i] = src[j];
+		dest[i] = src[j]; // Copie src[j] à la suite de dest
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dest[i] = '\0'; // Ajoute le caractère de fin de chaîne
+	return (dest); // Retourne le pointeur vers dest
 }
