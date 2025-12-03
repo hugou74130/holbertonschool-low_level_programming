@@ -5,17 +5,13 @@
  * @argc: Number of arguments.
  * @argv: Array of arguments.
  *
- * Description: This program copies the content of a file (file_from)
- * to another file (file_to). It handles errors such as incorrect
- * argument count, read failure, write failure, and file descriptor
- * closure failure.
- *
- * Return: 0 on success, or exits with the appropriate error code:
- * 97 - incorrect usage
- * 98 - read error
- * 99 - write error
- * 100 - close error
+ * Return: 0 on success,
+ * 97 if wrong argument count,
+ * 98 if file_from can't be read,
+ * 99 if file_to can't be written,
+ * 100 if file descriptors can't be closed.
  */
+
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, c1, c2;
