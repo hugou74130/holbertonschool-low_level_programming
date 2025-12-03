@@ -10,6 +10,7 @@
 */
 
 int mul(int a, int b)
+// Fonction qui multiplie deux entiers
 {
-return (a * b);
+	return (a * b); // Retourne le produit des deux entiers
 }

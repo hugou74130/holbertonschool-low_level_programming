@@ -8,12 +8,13 @@
 */
 
 void print_numbers(void)
+// Fonction qui affiche les chiffres de 0 à 9
 {
-int i;
+	int i;
 
-for (i = '0'; i <= '9'; i++)
-{
-_putchar(i);
-}
-_putchar('\n');
+	for (i = '0'; i <= '9'; i++) // Parcourt les caractères ASCII de '0' à '9'
+	{
+		_putchar(i); // Affiche chaque chiffre
+	}
+	_putchar('\n'); // Termine par un saut de ligne
 }

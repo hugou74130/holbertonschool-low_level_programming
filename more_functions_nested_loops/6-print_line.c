@@ -8,16 +8,17 @@
 */
 
 void print_line(int n)
+// Fonction qui imprime une ligne droite de caractères '_', n fois
 {
-int i;
-if (n <= 0)
-{
-_putchar('\n');
-return;
-}
-for (i = 0; i < n; i++)
-{
-_putchar('_');
-}
-_putchar('\n');
+	int i;
+	if (n <= 0)
+	{
+		_putchar('\n'); // Si n <= 0, imprime juste un saut de ligne
+		return;
+	}
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_'); // Affiche '_' n fois
+	}
+	_putchar('\n'); // Termine par un saut de ligne
 }

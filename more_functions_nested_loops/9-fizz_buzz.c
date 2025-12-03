@@ -9,21 +9,22 @@
  * Return: Always 0
  */
 int main(void)
+// Fonction principale : affiche les nombres de 1 à 100 avec FizzBuzz
 {
-	int i;					   // declare la variable i
-	for (i = 1; i <= 100; i++) // genere la suite de nombre de 1 a 100 inclus
+	int i; // Déclare la variable d'itération
+	for (i = 1; i <= 100; i++) // Parcourt les nombres de 1 à 100 inclus
 	{
-		if (i % 3 == 0 && i % 5 == 0) // si
+		if (i % 3 == 0 && i % 5 == 0) // Si i est multiple de 3 et 5
 			printf("FizzBuzz");
-		else if (i % 3 == 0)
+		else if (i % 3 == 0) // Si i est multiple de 3 uniquement
 			printf("Fizz");
-		else if (i % 5 == 0)
+		else if (i % 5 == 0) // Si i est multiple de 5 uniquement
 			printf("Buzz");
 		else
-			printf("%d", i);
+			printf("%d", i); // Sinon affiche i
 		if (i != 100)
-			printf(" ");
+			printf(" "); // Espace entre les nombres sauf après le dernier
 	}
-	printf("\n");
+	printf("\n"); // Saut de ligne final
 	return (0);
 }

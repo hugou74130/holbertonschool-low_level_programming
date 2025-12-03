@@ -9,9 +9,10 @@
 */
 
 int _isdigit(int c)
+// Fonction qui vérifie si un caractère est un chiffre (0-9)
 {
-if (c >= '0' && c <= '9')
-return (1);
-else
-return (0);
+	if (c >= '0' && c <= '9') // Vérifie si c est compris entre '0' et '9'
+		return (1); // Retourne 1 si c'est un chiffre
+	else
+		return (0); // Retourne 0 sinon
 }
