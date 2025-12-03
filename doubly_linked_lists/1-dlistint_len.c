@@ -8,13 +8,14 @@
  */
 
 size_t dlistint_len(const dlistint_t *h)
+// Fonction qui retourne le nombre d'éléments d'une liste doublement chaînée (dlistint_t)
 {
-	size_t count = 0;
+	size_t count = 0; // Initialise un compteur à 0
 
-	while (h != NULL)
+	while (h != NULL) // Parcourt la liste jusqu'à la fin
 	{
-		count++;
-		h = h->next;
+		count++; // Incrémente le compteur pour chaque noeud
+		h = h->next; // Passe au noeud suivant
 	}
-	return (count);
+	return (count); // Retourne le nombre total de noeuds
 }

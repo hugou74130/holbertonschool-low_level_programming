@@ -9,17 +9,18 @@
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+// Fonction qui ajoute un noeud au début d'une liste doublement chaînée (dlistint_t)
 {
 	dlistint_t *new = 0;
 
-	new = malloc(sizeof(dlistint_t));
+	new = malloc(sizeof(dlistint_t)); // Alloue dynamiquement un nouveau noeud
 	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->prev = NULL;
-	new->next = *head;
+		return (NULL); // Retourne NULL si l'allocation échoue
+	new->n = n; // Stocke la valeur reçue dans le champ n
+	new->prev = NULL; // Le précédent du nouveau noeud est NULL
+	new->next = *head; // Son suivant est l'ancien head
 	if (*head != NULL)
-		(*head)->prev = new;
-	*head = new;
-	return (new);
+		(*head)->prev = new; // Met à jour le précédent de l'ancien head
+	*head = new; // Met à jour le head de la liste
+	return (new); // Retourne l'adresse du nouveau noeud
 }

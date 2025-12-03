@@ -8,14 +8,15 @@
  */
 
 size_t print_dlistint(const dlistint_t *h)
+// Fonction qui affiche tous les éléments d'une liste doublement chaînée (dlistint_t)
 {
-	size_t count = 0;
+	size_t count = 0; // Initialise un compteur de noeuds
 
-	while (h != NULL)
+	while (h != NULL) // Parcourt la liste jusqu'à la fin
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count++;
+		printf("%d\n", h->n); // Affiche la valeur du noeud courant
+		h = h->next; // Passe au noeud suivant
+		count++; // Incrémente le compteur de noeuds
 	}
-	return (count);
+	return (count); // Retourne le nombre total de noeuds
 }
