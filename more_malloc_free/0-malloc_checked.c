@@ -12,11 +12,12 @@
  */
 
 void *malloc_checked(unsigned int b)
+// Fonction qui alloue b octets de mémoire et termine le programme si l'allocation échoue
 {
 	void *i;
 
-	i = malloc(b);
+	i = malloc(b); // Tente d'allouer b octets
 	if (i == NULL)
-		exit(98);
-	return (i);
+		exit(98); // Termine le programme avec le code 98 en cas d'échec
+	return (i); // Retourne le pointeur vers la mémoire allouée
 }

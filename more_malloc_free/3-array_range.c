@@ -16,22 +16,23 @@
  */
 
 int *array_range(int min, int max)
+// Fonction qui crée un tableau d'entiers de min à max inclus
 {
 	int *arr;
 	int size;
 	int i;
 
 	if (min > max)
-		return (NULL);
+		return (NULL); // Retourne NULL si min > max
 
-	size = max - min + 1;
+	size = max - min + 1; // Calcule la taille du tableau
 
-	arr = malloc(sizeof(int) * size);
+	arr = malloc(sizeof(int) * size); // Alloue la mémoire pour le tableau
 
 	if (arr == NULL)
-		return (NULL);
+		return (NULL); // Retourne NULL si l'allocation échoue
 
 	for (i = 0; i < size; i++)
-		arr[i] = min + i;
-	return (arr);
+		arr[i] = min + i; // Remplit le tableau avec les valeurs de min à max
+	return (arr); // Retourne le pointeur du tableau
 }
