@@ -24,31 +24,38 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t written;
-	size_t len;
+	int fd;			 // Déclare une variable 'fd' pour stocker le descripteur de fichier
+	ssize_t written; // Variable pour stocker le nombre d'octets réellement écrits
+	size_t len;		 // Variable pour stocker la longueur de text_content
 
-	if (filename == NULL)
-		return (-1);
+	if (filename == NULL) // Vérifie que filename n'est pas NULL
+		return (-1);	  // Si NULL, impossible d’ouvrir un fichier → erreur
 
 	fd = open(filename, O_WRONLY | O_APPEND);
+	// Ouvre le fichier en écriture uniquement (O_WRONLY)
+	// et en mode ajout à la fin du fichier (O_APPEND)
 
-	if (fd == -1)
-		return (-1);
+	if (fd == -1)	 // Si open() échoue, fd vaut -1
+		return (-1); // On retourne -1 pour indiquer une erreur
 
-	if (text_content == NULL)
+	if (text_content == NULL) // Si text_content est NULL (rien à ajouter)
 	{
-		close(fd);
-		return (1);
+		close(fd);	// On ferme juste le fichier correctement
+		return (1); // Et on retourne 1 (succès sans écrire)
 	}
 
 	len = strlen(text_content);
-	written = write(fd, text_content, len);
+	// Calcule la longueur du texte à écrire
 
-	close(fd);
+	written = write(fd, text_content, len);
+	// Écrit dans le fichier le contenu de text_content
+	// write() retourne le nombre d'octets réellement écrits
+
+	close(fd); // On ferme le fichier après l'écriture
 
 	if (written == (ssize_t)len)
-		return (1);
+		// Si write() a écrit exactement tous les octets attendus
+		return (1); // Succès
 
-	return (-1);
+	return (-1); // Sinon, échec d'écriture
 }
