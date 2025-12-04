@@ -1,114 +1,147 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+    <img width=200px height=200px src="https://image.noelshack.com/fichiers/2025/49/4/1764853936-gemini-generated-image-au2pdxau2pdxau2p.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Singly Linked Lists</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/hugou74130/holbertonschool-low_level_programming.svg)](https://github.com/hugou74130/holbertonschool-low_level_programming/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
-    <br> 
+<p align="center">
+  Implementation complète de listes chaînées simples en C.
+  <br>
 </p>
 
 ## 📝 Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
+- [Running the tests](#tests)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Acknowledgements](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 About <a name="about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Ce projet implémente une structure de données fondamentale en programmation : les listes chaînées simples. Une liste chaînée est une collection de nœuds où chaque nœud contient une valeur et un pointeur vers le nœud suivant. Ce projet fournit des fonctions complètes pour créer, manipuler et gérer des listes chaînées en C, incluant l'ajout d'éléments, la suppression, la recherche et l'affichage des données.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+Les listes chaînées sont essentielles pour comprendre les structures de données dynamiques et sont un prérequis pour maîtriser des structures plus complexes comme les arbres et les graphes.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+## 🏁 Getting Started <a name="getting_started"></a>
+
+Ces instructions vous permettront d'obtenir une copie du projet en cours d'exécution sur votre machine locale à des fins de développement et de test.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+Vous avez besoin d'un compilateur C installé sur votre système :
 
-```
-Give examples
+```bash
+# Sur Ubuntu/Debian
+sudo apt-get install gcc
+
+# Sur macOS (avec Homebrew)
+brew install gcc
+
+# Sur Windows
+# Installer MinGW ou utiliser un compilateur C compatible
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Clonez le dépôt et naviguez vers le répertoire du projet :
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+```bash
+git clone https://github.com/hugou74130/holbertonschool-low_level_programming.git
+cd holbertonschool-low_level_programming/singly_linked_lists
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+Compilez les fichiers sources :
 
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```bash
+gcc -Wall -Wextra -Werror *.c -o linked_lists
 ```
 
-### And coding style tests
+Exécutez le programme :
 
-Explain what these tests test and why
-
-```
-Give an example
+```bash
+./linked_lists
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Voici comment utiliser les principales fonctions de ce projet :
 
-## 🚀 Deployment <a name = "deployment"></a>
+**Créer et initialiser une liste :**
+```c
+list_t *head = NULL;
+// Ajouter des nœuds à la liste
+```
 
-Add additional notes about how to deploy this on a live system.
+**Ajouter des éléments :**
+```c
+// Ajouter au début de la liste
+add_node(&head, "Nouveau nœud");
 
-## ⛏️ Built Using <a name = "built_using"></a>
+// Ajouter à une position spécifique
+add_node_at_index(&head, "Élément", index);
+```
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+**Afficher la liste :**
+```c
+print_list(head);
+```
 
-## ✍️ Authors <a name = "authors"></a>
+**Récupérer la longueur :**
+```c
+size_t length = list_len(head);
+printf("La liste contient %zu éléments\n", length);
+```
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+## 🔧 Running the tests <a name="tests"></a>
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+### Tests des fonctions principales
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+Les tests valident que chaque fonction fonctionne correctement :
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+```bash
+gcc -Wall -Wextra -Werror main.c *.c -o test
+./test
+```
+
+### Tests de manipulation de listes
+
+Testez l'ajout, la suppression et la modification d'éléments :
+
+```bash
+# Vérifier que les éléments sont correctement ajoutés
+# Vérifier que l'ordre est préservé
+# Vérifier que les pointeurs sont correctement liés
+```
+
+## ⛏️ Built Using <a name="built_using"></a>
+
+- [C](https://en.wikipedia.org/wiki/C_(programming_language)) - Programming Language
+- [GCC](https://gcc.gnu.org/) - Compiler
+- [Standard C Library](https://en.wikipedia.org/wiki/C_standard_library) - Standard Library
+
+## ✍️ Authors <a name="authors"></a>
+
+- [@hugou74130](https://github.com/hugou74130) - Idea & Initial work
+
+Voir aussi la liste des [contributeurs](https://github.com/hugou74130/holbertonschool-low_level_programming/contributors) qui ont participé à ce projet.
+
+## 🎉 Acknowledgements <a name="acknowledgement"></a>
+
+- Holberton School pour l'inspiration pédagogique
+- La communauté C pour les meilleures pratiques
+- Ressources éducatives sur les structures de données
