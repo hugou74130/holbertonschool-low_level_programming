@@ -1,14 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_most_numbers - prints the numbers from 0 to 9
- *                      except 2 and 4, followed by a new line
+ * print_most_numbers - Prints numbers from 0 to 9 (excluding 2 and 4)
  *
- * You can only use _putchar twice
+ * Description: Prints all single digits except 2 and 4,
+ * followed by a new line, using _putchar
+ * Return: void
  */
-
-void print_rev(char *s)
-// Fonction à compléter : affichera les chiffres sauf 2 et 4 (voir prototype ligne 4)
+void print_most_numbers(void)
 {
-	// Fonction non implémentée pour l'instant
+	int c; // Déclaration d’une variable entière 'c' qui servira à parcourir les chiffres
+
+	c = '0'; // On initialise 'c' au caractère '0'
+
+	while (c <= '9') // Boucle qui parcourt tous les caractères de '0' à '9'
+	{
+		if (c != '2' && c != '4') // Si le caractère n'est ni '2' ni '4'
+			_putchar(c);		  // Alors on l'affiche grâce à _putchar
+		c++;					  // On passe au caractère suivant
+	}
+
+	_putchar('\n'); // Après avoir affiché les chiffres, on ajoute un retour à la ligne
 }
